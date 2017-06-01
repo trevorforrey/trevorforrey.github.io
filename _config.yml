@@ -24,7 +24,6 @@ github_username:  trevorforrey
 
 # Build settings
 markdown: kramdown
-theme: minima
 sass:
   sass_dir: _sass
 include: ['_pages']
