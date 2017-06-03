@@ -1,13 +1,25 @@
 ---
-
+layout: default
 ---
-
-{% include head.html %}
-<body>
-  {% include side_panel.html %}
-  <div class="main-area">
-    {% include navigation_bar.html %}
-    <h1> Fresh Start </h1>
+<div class="main-area">
+  {% include navigation_bar.html %}
+  <h1> Projects </h1>
+  <div class="project-list">
+    {% for project in site.categories.project %}
+      <div class="project-box">
+        <div class="project-box-inner">
+          <img src="{{project.img-src}}">
+          <a href="{{project.permalink}}.html">{{project.title}}</a>
+          <button class="project-btn">View Project</button>
+          <p> {{project.meta}} </p>
+        </div>
+      </div>
+    {% endfor %}
+    </ul>
   </div>
-</body>
-{% include footer.html %}
+  <p>This is a paragraph.</p>
+
+<button class="btn1">Hide</button>
+<button class="btn2">Show</button>
+
+</div>
