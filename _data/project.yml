@@ -1,0 +1,17 @@
+- title: Super Cool Project
+  meta: This project will be super cool... i hope
+  category: project
+  img-src: assets/img/placeholder.jpg
+  content:
+
+- title: Markov Chain Text Generator
+  meta: Text Generator using markov chain implementation in python
+  category: project
+  img-src: assets/img/placeholder.jpg
+  content:
+
+- title: Organic Robo Head
+  meta: Embedded Project where a robotic head reacts to touch
+  category: project
+  img-src: assets/img/robohead.jpg
+  content: 

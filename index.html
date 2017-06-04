@@ -4,19 +4,31 @@ layout: default
 <div class="main-area">
   {% include navigation_bar.html %}
   <h1> Projects </h1>
-  <div class="project-list">
-    {% for project in site.categories.project %}
-      <div class="project-box">
-        <div class="project-box-inner">
-          <img src="{{project.img-src}}">
-          <a href="{{project.permalink}}.html">{{project.title}}</a>
-          <button class="project-btn">View Project</button>
-          <p> {{project.meta}} </p>
+
+  <div class="project-belt">
+    <div class="project-list">
+      {% for project in site.categories.project %}
+      <div class="project-thumb-container">
+        <div class="project-thumb">
+            <img src="{{project.img-src}}">
+        </div>
+        <div class="project-thumb-overlay">
+          <strong>{{project.title}}</strong>
         </div>
       </div>
-    {% endfor %}
-    </ul>
+      {% endfor %}
+      </ul>
+    </div>
+
+    <div class="project-wrap">
+      <div class="project-container">
+      </div>
+    </div>
+
   </div>
+
+
+
   <p>This is a paragraph.</p>
 
 <button class="btn1">Hide</button>
