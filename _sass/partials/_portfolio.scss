@@ -1,0 +1,23 @@
+.project-wrap {
+  width: 200%;
+  background: pink;
+  overflow: auto;
+  clear: both;
+}
+
+.project-thumb-container {
+  width: 180px;
+  height: 180px;
+  margin: 0px auto;
+  float: left;
+
+  img {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  &:hover {
+    color: blue;
+  }
+}

@@ -1,0 +1,37 @@
+---
+layout: default
+---
+<div class="main-area">
+  {% include navigation_bar.html %}
+  <h1> Projects </h1>
+
+  <div class="project-belt">
+    <div class="project-list">
+      {% for project in site.categories.project %}
+      <div class="project-thumb-container">
+        <div class="project-thumb">
+            <img src="{{project.img-src}}">
+        </div>
+        <div class="project-thumb-overlay">
+          <strong>{{project.title}}</strong>
+        </div>
+      </div>
+      {% endfor %}
+      </ul>
+    </div>
+
+    <div class="project-wrap">
+      <div class="project-container">
+      </div>
+    </div>
+
+  </div>
+
+
+
+  <p>This is a paragraph.</p>
+
+<button class="btn1">Hide</button>
+<button class="btn2">Show</button>
+
+</div>
