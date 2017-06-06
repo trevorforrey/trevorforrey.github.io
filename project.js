@@ -5,9 +5,10 @@ $(document).ready(function(){
     $(".btn2").click(function(){
         $("p").show();
     });
-    $(".project-btn").click(function() {
-      $(this).parent().parent().parent().hide();
-      $(this).parent().parent().parent().load("/project/0000/09/09/organic-robo-head.html");
-      $(this).parent().parent().parent().show();
+    $(".project-thumb-container").click(function() {
+      $(".project-belt").css('left', '-100%');
+    });
+    $(".project-return").click(function() {
+      $(".project-belt").css('left', '0%');
     });
 });

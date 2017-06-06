@@ -1,8 +1,15 @@
-.project-wrap {
+.portfolio {
+  overflow-x: hidden;
+}
+
+.project-belt {
   width: 200%;
-  background: pink;
-  overflow: auto;
-  clear: both;
+  position: relative;
+}
+
+.project-list-wrap, .project-wrap {
+  width: 50%;
+  float: left;
 }
 
 .project-thumb-container {
@@ -19,5 +26,25 @@
 
   &:hover {
     color: blue;
+  }
+}
+
+.project-container {
+  max-width: 600px;
+  margin: 0px auto;
+
+  img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+.project-return {
+  width: 20px;
+  height: 20px;
+  background-color: coral;
+
+  &:hover {
+    opacity: 0.5;
   }
 }

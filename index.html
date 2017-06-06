@@ -5,25 +5,39 @@ layout: default
   {% include navigation_bar.html %}
   <h1> Projects </h1>
 
-  <div class="project-belt">
-    <div class="project-list">
-      {% for project in site.categories.project %}
-      <div class="project-thumb-container">
-        <div class="project-thumb">
-            <img src="{{project.img-src}}">
-        </div>
-        <div class="project-thumb-overlay">
-          <strong>{{project.title}}</strong>
-        </div>
-      </div>
-      {% endfor %}
-      </ul>
-    </div>
+  <section class="portfolio">
 
-    <div class="project-wrap">
-      <div class="project-container">
+    <div class="project-belt">
+
+      <div class="project-list-wrap">
+        {% for project in site.categories.project %}
+        <div class="project-thumb-container">
+          <img class="project-thumb" src="{{project.img-src}}">
+          <div class="project-thumb-overlay">
+            <strong>{{project.title}}</strong>
+          </div>
+        </div>
+        {% endfor %}
+        </ul>
       </div>
-    </div>
+
+      <div class="project-wrap">
+        <div class="project-container">
+          <div class="project-return">
+          </div>
+          <h4 class="project-title">Project Title</h4>
+          <p>info about the project</p>
+          <img src="assets/img/placeholder.jpg">
+          <p>Some more text about the project</p>
+          <img src="assets/img/placeholder.jpg">
+          <p>Some more text about the project</p>
+          <img src="assets/img/placeholder.jpg">
+          <p>Some more text about the project</p>
+          <div class="project-load"></div>
+        </div>
+      </div>
+
+    </section>
 
   </div>
 
