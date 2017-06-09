@@ -9,9 +9,11 @@ $(document).ready(function(){
 
     $(".project-thumb-container").click(function() {
       $(".project-belt").css('left', '-100%');
+      $(".project-head").css('display', 'none');
     });
     $(".project-return").click(function() {
       $(".project-belt").css('left', '0%');
+      $(".project-head").css('display', 'block');
     });
 
     $.ajaxSetup({cache: true});

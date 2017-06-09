@@ -1,7 +1,9 @@
 .main-area {
   display: inline-block;
   width: 70%;
+  padding-left: 30%;
+  padding-top: 0.8rem;
   vertical-align: middle;
   overflow: auto;
-  margin-left: 30%;
+  float: left;
 }

@@ -8,3 +8,10 @@ content-src: project/0000/08/08/python-markov-chain.html
 ---
 
 # Python Project
+
+
+{% highlight ruby %}
+def what?
+42
+end
+{% endhighlight %}

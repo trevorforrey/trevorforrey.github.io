@@ -36,8 +36,6 @@
   body .navigation-bar {
     height: 3rem;
     background-color: #F8F8FB;
-    position: fixed;
-    z-index: 1;
   }
   body .side-panel {
     display: none;
@@ -53,10 +51,16 @@
     padding-top: 0.75em;
     padding-left: 0.5em;
   }
+  body .nav {
+    display: inline-block;
+  }
 }
 
 @media only screen and (min-width: 600px) {
   body .nav-name {
+    display: none;
+  }
+  body .nav {
     display: none;
   }
 

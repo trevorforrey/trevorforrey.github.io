@@ -30,12 +30,12 @@
 }
 
 .project-container {
-  max-width: 600px;
   margin: 0px auto;
 
   img {
     max-width: 100%;
     margin-bottom: 20px;
+    text-align: center;
   }
 }
 
@@ -46,5 +46,20 @@
 
   &:hover {
     opacity: 0.5;
+  }
+}
+
+.work-detail-container {
+  padding: 1rem;
+
+  img {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  iframe {
+    text-align: center;
+    margin-bottom: 1rem;
+    display: block;
   }
 }
