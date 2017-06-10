@@ -3,12 +3,11 @@ layout: project
 title: Organic Robo Head
 meta: Embedded Project where a robotic head reacts to touch
 category: project
-img-src: assets/img/placeholder.jpg
+img-src: assets/img/robohead.jpg
 content-src: project/0000/09/09/organic-robo-head.html
 ---
 
-# Organic Robo Head
-{% include icon-github.html %}
+# Organic Robo Head {% include icon-github.html %}
 **Time to get froggy**
 ![Alt text](assets/img/robohead.jpg "My Title")
 
