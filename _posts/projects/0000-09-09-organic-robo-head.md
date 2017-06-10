@@ -5,11 +5,15 @@ meta: Embedded Project where a robotic head reacts to touch
 category: project
 img-src: assets/img/robohead.jpg
 content-src: project/0000/09/09/organic-robo-head.html
+github-url: organic_robo_head
 ---
 
-# Organic Robo Head {% include icon-github.html %}
-**Time to get froggy**
+# Organic Robo Head {% include icon-github.html username='trevorforrey' git-url='organic_robo_head' %}
+
 ![Alt text](assets/img/robohead.jpg "My Title")
+
+**Time to get froggy**
+
 
 This project was made for an Embedded C programming class. I wanted to create something
 using embedded materials, but also have a bit of magic in the project, by hiding as much of the materials as possible. From this idea, Organic Robo Head was born.

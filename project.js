@@ -10,10 +10,19 @@ $(document).ready(function(){
     $(".project-thumb-container").click(function() {
       $(".project-belt").css('left', '-100%');
       $(".project-head").css('display', 'none');
+      $(".side-panel").css('display', 'none');
+      $(".main-area").css('padding-left', '10%');
+      $(".main-area").css('padding-right', '10%');
+      $(".main-area").css('width', '100%');
+      //$('.project-container').css('display', 'flex');
+      //$('.project-container').css('justify-content', 'center');
     });
     $(".project-return").click(function() {
       $(".project-belt").css('left', '0%');
       $(".project-head").css('display', 'block');
+      $(".side-panel").css('display', 'block');
+      $(".main-area").css('width', '70%');
+      $(".main-area").css('padding-left', '30%');
     });
 
     $.ajaxSetup({cache: true});

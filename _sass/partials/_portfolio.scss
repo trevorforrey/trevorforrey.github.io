@@ -33,11 +33,16 @@
 
 .project-container {
   margin: 0px auto;
+  padding-right: 5rem;
 
   img {
     max-width: 100%;
     margin-bottom: 20px;
     text-align: center;
+  }
+
+  p {
+    max-width: 80%;
   }
 }
 
@@ -45,10 +50,13 @@
   width: 20px;
   height: 20px;
   background-color: coral;
-  position: fixed;
+  position: relative;
+  cursor: pointer;
+  opacity: 0.5;
+  top: 2.5rem;
 
   &:hover {
-    opacity: 0.5;
+    opacity: 1.0;
   }
 }
 
