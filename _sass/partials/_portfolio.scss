@@ -1,3 +1,14 @@
+$thumb-list: thumb-1 thumb-2 thumb-3 thumb-4;
+$thumb-long: 24em;
+$thumb-medium: 22em;
+$thumb-short: 18em;
+
+$i: 6;
+@while $i < 0 {
+  #thumb-#{$i} {
+  }
+}
+
 .portfolio {
   overflow-x: hidden;
 }
@@ -27,31 +38,56 @@
   }
 
   &:hover {
-    color: blue;
+    color: teal;
   }
 }
 
 .project-container {
   margin: 0px auto;
 
+  p {
+    margin-top: 16px;
+    margin-bottom: 1.5em;
+    color: #444;
+  }
+
   img {
     max-width: 100%;
-    margin-bottom: 20px;
-    text-align: center;
+    margin-bottom: 1.2em;
+    display: block;
+    margin: auto;
   }
 }
+
+$break-phone: 750px;
+$break-small: 878px;
+$break-large: 1023px;
 
 .project-return {
   width: 20px;
   height: 20px;
   background-color: coral;
-  position: absolute;
+  position: fixed;
   cursor: pointer;
   opacity: 0.5;
-  top: 2.5rem;
+  top: 3.8rem;
+  left: 18%;
+  display: none;
 
   &:hover {
     opacity: 1.0;
+  }
+
+  @media screen and (max-width: $break-large) {
+    left: 10%;
+  }
+  @media screen and (max-width: $break-small) {
+    left: 3%;
+  }
+  @media screen and (max-width: $break-phone) {
+    position: relative;
+    display: block;
+    top: 1rem;
   }
 }
 
@@ -68,6 +104,7 @@
 
   iframe {
     text-align: center;
+    margin: 0px auto;
     margin-bottom: 1rem;
     display: block;
   }

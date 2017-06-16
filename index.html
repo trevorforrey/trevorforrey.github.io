@@ -13,7 +13,7 @@ layout: default
 
       <div class="project-list-wrap">
         {% for project in site.categories.project %}
-        <div class="project-thumb-container" data-content="{{project.content-src}}">
+        <div class="project-thumb-container" id="thumb-{{forloop.index}}" data-content="{{project.content-src}}">
           <img class="project-thumb" src="{{project.img-src}}">
           <div class="project-thumb-overlay">
             <strong>{{project.title}}</strong>

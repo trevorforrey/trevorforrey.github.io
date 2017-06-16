@@ -10,8 +10,6 @@ github-url: organic_robo_head
 
 # Organic Robo Head {% include icon-github.html username='trevorforrey' git-url='organic_robo_head' %}
 
-![Alt text](assets/img/robohead.jpg "My Title")
-
 **Time to get froggy**
 
 
@@ -19,6 +17,8 @@ This project was made for an Embedded C programming class. I wanted to create so
 using embedded materials, but also have a bit of magic in the project, by hiding as much of the materials as possible. From this idea, Organic Robo Head was born.
 
 The project was created using a Raspberry Pi as the brains of the bot, along with a PWM9685 to control the movements of the head (and LEDs), and a CAP8585 to sense the capacitive touch from the user.
+
+![Alt text](assets/img/robohead.jpg "My Title")
 
 I used I2C to communicate to both the touch sensors and the PWM driver.
 

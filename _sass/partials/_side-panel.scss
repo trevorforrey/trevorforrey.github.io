@@ -1,7 +1,7 @@
 .side-panel {
   text-align: center;
   float: left;
-  color: teal;
+  color: #8c8c8c;
   width: 20%;
   height: 100%;
   margin: auto;
@@ -10,6 +10,10 @@
   padding-right: 2em;
   min-width: 8em;
   position: fixed;
+
+  h2 {
+    color: #444;
+  }
 
   img {
     max-width: 60%;
