@@ -37,11 +37,23 @@ $(document).ready(function(){
       //).html(spinner.load)..
     });
 
-    $(".about").click(function() {
+    $(".about-button").click(function() {
       $(".main-area").css('display', 'none');
-      $(".side-panel").css('display', 'block');
-      $(".side-panel").css('width', '60%');
+      $(".navigation-bar").css('top', '0');
+      $(".navigation-bar").css('left', '0');
+      $(".navigation-bar").css('position', 'fixed');
+      $(".side-panel").css('display', 'inline-block');
+      $(".side-panel").css('width', '100%');
       $(".side-panel").css('position', 'static');
+      $(".side-panel").css('margin', '0px auto');
+      $(".side-panel").css('padding', '0');
+      $(".side-panel").css('padding-top', '5em');
+    });
+
+    $(".portfolio-button").click(function() {
+      $(".main-area").css('display', 'block');
+      $(".side-panel").css('display', 'none');
+      $(".navigation-bar").css('position', 'static');
     });
 
 });
