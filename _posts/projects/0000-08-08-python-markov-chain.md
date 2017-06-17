@@ -16,3 +16,5 @@ def what?
 42
 end
 {% endhighlight %}
+
+{% include sample.html %}

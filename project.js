@@ -1,10 +1,4 @@
 $(document).ready(function(){
-    $(".btn1").click(function(){
-        $("p").hide();
-    });
-    $(".btn2").click(function(){
-        $("p").show();
-    });
 
     $(".project-thumb-container").click(function() {
       $(".project-belt").css('left', '-100%');
@@ -34,6 +28,7 @@ $(document).ready(function(){
       var newTitle = project.find('');
       var newHTML = project.data('content');
       $('.project-load').load(newHTML);
+      hljs.highlightBlock($("coder")[0]);
       //).html(spinner.load)..
     });
 
