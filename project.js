@@ -1,18 +1,19 @@
 $(document).ready(function(){
 
     $(".project-thumb-container").click(function() {
-      $(".project-belt").css('left', '-100%');
       $(".project-head").css('display', 'none');
       $(".side-panel").css('display', 'none');
+      //$(".project-belt").css('left', '-100%');
       $(".main-area").css('padding-left', '0%');
       $(".main-area").css('padding-right', '0%');
       $(".main-area").css('width', '100%');
       $(".project-return").css('display', 'block');
-      //$('.project-container').css('display', 'flex');
-      //$('.project-container').css('justify-content', 'center');
+
     });
     $(".project-return").click(function() {
-      $(".project-belt").css('left', '0%');
+      $(".project-belt").animate({
+        left: '0%'
+      }, 350);
       $(".project-head").css('display', 'block');
       $(".side-panel").css('display', 'block');
       $(".main-area").css('width', '70%');
@@ -27,7 +28,11 @@ $(document).ready(function(){
       var project = $(this);
       var newTitle = project.find('');
       var newHTML = project.data('content');
+      // $('.project-load').css('display', 'none');
       $('.project-load').load(newHTML);
+      $(".project-belt").animate({
+        left: '-100%'
+      }, 350);
     });
 
     $(".about-button").click(function() {
