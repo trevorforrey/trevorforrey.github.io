@@ -23,11 +23,10 @@ github_username:  trevorforrey
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 sass:
   sass_dir: _sass
 include: ['_pages']
-kramdown:
-  input: GFM
 gems:
   - jekyll-feed
 exclude:

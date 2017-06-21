@@ -8,3 +8,9 @@ content-src: project/0000/07/07/super-cool-project.html
 ---
 
 ## Super cool project
+
+{% highlight ruby %}
+def foo
+  puts 'foo'
+end
+{% endhighlight %}

@@ -28,8 +28,6 @@ $(document).ready(function(){
       var newTitle = project.find('');
       var newHTML = project.data('content');
       $('.project-load').load(newHTML);
-      hljs.highlightBlock($("coder")[0]);
-      //).html(spinner.load)..
     });
 
     $(".about-button").click(function() {
