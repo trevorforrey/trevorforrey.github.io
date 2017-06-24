@@ -10,17 +10,22 @@ github-url: organic_robo_head
 
 # Organic Robo Head {% include icon-github.html username='trevorforrey' git-url='organic_robo_head' %}
 
-**Time to get froggy**
+This project was for an Embedded C Programming class I took my Junior year.
 
+My goals for this project was:
 
-This project was made for an Embedded C programming class. I wanted to create something
-using embedded materials, but also have a bit of magic in the project, by hiding as much of the materials as possible. From this idea, Organic Robo Head was born.
-
-The project was created using a Raspberry Pi as the brains of the bot, along with a PWM9685 to control the movements of the head (and LEDs), and a CAP8585 to sense the capacitive touch from the user.
+* It didn't look like an embedded project at first glance
+* The user could interact with it
+* The subject of the piece would feel alive
 
 ![Alt text](assets/img/robohead.jpg "My Title")
 
-I used I2C to communicate to both the touch sensors and the PWM driver.
+The project was created using a Raspberry Pi, along with a PWM driver to control the movements of the head and dimming of the LEDS. I also used a capacitive touch sensor to take in
+user inputs. I used an I2C bus to communicate to both the touch sensors and the PWM driver.
+
+I used a CAP1818 as the touch sensor and a PCA9685 for the PWM driver. To communicate with
+both of these I translated their arduino libraries into C. This ended up being one of the
+hardest parts of the project. For some example code, I have the translated CAP1818 code below.
 
 {% highlight c %}
 #include <stdint.h>
@@ -55,5 +60,9 @@ uint8_t touched(int fd_cap) {
 }
 {% endhighlight %}
 
-~~Oh no, didn't mean to~~
+This ended up being a really fun project. It was the first time I combined art
+and programming together. I hope to do more projects like this in the future.
+If you want to see it in action, I have a small demo below.
+
+
 <iframe width="560" height="315" align="middle" src="https://www.youtube.com/embed/FqyfqyQukl8" frameborder="0" allowfullscreen></iframe>
