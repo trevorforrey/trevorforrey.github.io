@@ -2,6 +2,7 @@ $(document).ready(function(){
 
     $(".project-thumb-container").click(function() {
       $(".project-head").css('display', 'none');
+      // $(".project-belt").css('margin-top', '5.5em');
       $(".side-panel").css('display', 'none');
       //$(".project-belt").css('left', '-100%');
       $(".main-area").css('padding-left', '0%');
@@ -33,6 +34,8 @@ $(document).ready(function(){
       $(".project-belt").animate({
         left: '-100%'
       }, 350);
+      // sleep(350);
+      // $(".project-belt").css('margin-top', '0em');
     });
 
     $(".about-button").click(function() {

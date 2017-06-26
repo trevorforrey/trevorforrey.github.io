@@ -3,7 +3,7 @@ layout: project
 title: Markov Chain Text Generator
 meta: Text Generator using markov chain implementation in python
 category: project
-img-src: assets/img/placeholder.jpg
+img-src: assets/img/harry_2.jpg
 content-src: project/0000/08/08/python-markov-chain.html
 github-url: Text_Generator_Markov
 ---
@@ -14,6 +14,21 @@ This was a fun small project. I didn't know much about Markov Chains and wanted
 to learn through making something. After a lot of reading and watching tutorials
 this was the outcome. Here's an example output from inputting the first chapter
 of a Harry Potter book.
+
+> He found what he was looking furiously at Harry, his face like a gigantic
+beet with a mustache: “MOTORCYCLES DON’T FLY!”
+Dudley came waddling toward them as fast asleep.
+Dudley stood with his nose pressed on, “is that last night Voldemort
+turned up in Godric’s Hollow. He went to find the Potters’ son, Harry.
+But — he couldn’t be able to see anything else to do with living in a dark cupboard,
+but Harry had no one. Everybody knew that Dudley’s birthday, his parents had died of boredom
+itself — no company except stupid people drumming their fingers on the glass. Harry
+peered at it. Boa Constrictor’s tank had vanished. The great snake was uncoiling itself rapidly,
+slithering over bits of wood and stone. Dudley and Piers to be spending the day somewhere that
+wasn’t there — or rather, as though she’d just swallowed a lemon.
+“And come back and fi nd the house. When he had been waiting
+on a cold, hard wall all day,” said Harry, “honestly . . .”
+But Uncle Vernon sugg
 
 First, the dictionary of prefixes / suffixes is created from the source text.
 
