@@ -8,7 +8,7 @@ content-src: project/0000/08/08/python-markov-chain.html
 github-url: Text_Generator_Markov
 ---
 
-# Python Project {% include icon-github.html username='trevorforrey' git-url='Text_Generator_Markov' %}
+# Markov Chain Text Generator {% include icon-github.html username='trevorforrey' git-url='Text_Generator_Markov' %}
 
 This was a fun small project. I didn't know much about Markov Chains and wanted
 to learn through making something. After a lot of reading and watching tutorials

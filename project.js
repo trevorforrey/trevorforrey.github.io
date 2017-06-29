@@ -16,9 +16,15 @@ $(document).ready(function(){
         left: '0%'
       }, 350);
       $(".project-head").css('display', 'block');
-      $(".side-panel").css('display', 'block');
+      if ($(window).width() > 600) {
+        $(".side-panel").css('display', 'block');
+      }
       $(".main-area").css('width', '70%');
-      $(".main-area").css('padding-left', '30%');
+      if ($(window).width() > 600) {
+        $(".main-area").css('padding-left', '30%');
+      } else {
+        $(".main-area").css('padding-left', '10%');
+      }
       $(".project-return").css('display', 'none');
     });
 
