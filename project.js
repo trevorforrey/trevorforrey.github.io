@@ -9,8 +9,8 @@ $(document).ready(function(){
       $(".main-area").css('padding-right', '0%');
       $(".main-area").css('width', '100%');
       $(".project-return").css('display', 'block');
-
     });
+
     $(".project-return").click(function() {
       $(".project-belt").animate({
         left: '0%'
@@ -19,11 +19,13 @@ $(document).ready(function(){
       if ($(window).width() > 600) {
         $(".side-panel").css('display', 'block');
       }
-      $(".main-area").css('width', '70%');
+      if ($(window).width() > 600) {
+        $(".main-area").css('width', '70%');
+      }
       if ($(window).width() > 600) {
         $(".main-area").css('padding-left', '30%');
       } else {
-        $(".main-area").css('padding-left', '10%');
+        $(".main-area").css('padding', '1rem');
       }
       $(".project-return").css('display', 'none');
     });

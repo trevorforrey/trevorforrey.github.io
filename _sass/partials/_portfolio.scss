@@ -47,6 +47,20 @@ $i: 6;
   }
 }
 
+@media screen and (max-width: 600px) {
+  body .project-thumb-container {
+    width: 10.5em;
+    height: 15.75em;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+
+    img {
+      width: 10.5em;
+      height: 13.875em;
+    }
+  }
+}
+
 .project-title {
   text-align: center;
   background-color: rgb(231,231,231);
@@ -54,6 +68,14 @@ $i: 6;
   line-height: 2.5rem;
   font-size: 1rem;
   color: #666;
+}
+
+@media screen and (max-width: 600px) {
+  body .project-title {
+    font-size: 0.75rem;
+    line-height: 1.875rem;
+    height: 1.875rem;
+  }
 }
 
 .project-container {
