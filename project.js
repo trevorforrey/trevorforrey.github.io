@@ -55,7 +55,7 @@ $(document).ready(function(){
       $(".side-panel").css('width', '100%');
       $(".side-panel").css('position', 'static');
       $(".side-panel").css('margin', '0px auto');
-      $(".side-panel").css('padding', '0');
+      $(".side-panel").css('padding', '1em');
       $(".side-panel").css('padding-top', '5em');
     });
 

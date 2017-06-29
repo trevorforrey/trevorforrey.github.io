@@ -1,6 +1,6 @@
 ---
 layout: project
-title: Markov Chain Text Generator
+title: Markov Chain Fun
 meta: Text Generator using markov chain implementation in python
 category: project
 img-src: assets/img/harry_2.jpg

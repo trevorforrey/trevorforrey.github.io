@@ -12,11 +12,12 @@
 
   .nav {
     float: right;
-    padding-right: .2em;
+    padding-right: .8em;
     width: 60%;
   }
 
   li {
+    float: right;
     line-height: 0.25rem;
     height: 0.5rem;
     display: inline-block;
