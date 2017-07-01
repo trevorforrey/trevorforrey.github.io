@@ -13,8 +13,4 @@ content-src: project/0000/07/07/super-cool-project.html
 
 ## Super cool project
 
-{% highlight ruby %}
-def foo
-  puts 'foo'
-end
-{% endhighlight %}
+<iframe src="https://www.google.com/maps/d/u/0/embed?mid=1JP4eYduhJ50lz6lsKgMlWkpdhdk" width="640" height="480"></iframe>
