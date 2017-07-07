@@ -26,4 +26,5 @@ PS4 fight stick. Here are some pictures of the process and the final result.
 
 Throughout this project I was able to learn a lot about prototyping tools. It was
 also nice being able to do some graphic design for the collage on the face of
-the stick.
+the stick. When I made this I was pretty crazy about Street Fighter and I'm glad
+I was able to learn something and be productive through my excitement of the series.
