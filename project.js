@@ -12,6 +12,7 @@ $(document).ready(function(){
     });
 
     $(".project-return").click(function() {
+      window.scrollTo(0, 0);
       $(".project-belt").animate({
         left: '0%'
       }, 350);
