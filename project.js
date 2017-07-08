@@ -39,6 +39,7 @@ $(document).ready(function(){
       var newTitle = project.find('');
       var newHTML = project.data('content');
       // $('.project-load').css('display', 'none');
+      window.scrollTo(0, 0);
       $('.project-load').load(newHTML);
       $(".project-belt").animate({
         left: '-100%'
