@@ -132,6 +132,10 @@ $break-large: 1023px;
   max-width: 650px;
   margin: 0px auto;
 
+  p {
+    font-size: 1.15em; 
+  }
+
   ul {
     padding-left: 1rem;
   }
@@ -140,6 +144,7 @@ $break-large: 1023px;
     max-width: 400px;
     margin: 0px auto;
     margin-bottom: 1rem;
+    text-align: center;
   }
 
   iframe {
