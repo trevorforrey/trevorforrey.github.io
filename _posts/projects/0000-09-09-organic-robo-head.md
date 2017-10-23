@@ -18,6 +18,7 @@ My goals for this project was:
 * The user could interact with it
 * The subject of the piece would feel alive
 
+{:.image}
 ![Alt text](assets/img/robohead.jpg "My Title")
 
 The project was created using a Raspberry Pi, along with a PWM driver to control the movements of the head and dimming of the LEDS. I also used a capacitive touch sensor to take in

@@ -9,6 +9,7 @@ content-src: project/0000/07/07/fightstick.html
 
 # Custom Fight Stick
 
+{:.image}
 ![Alt text](assets/img/chun-slight-speed-down.gif "My Title")
 
 A couple years ago, I got really into Street Fighter: Third Strike. Third Strike
@@ -17,13 +18,16 @@ my girlfriend. Playing Third Strike really opened up a new world for me when it
 comes to fighting games. With the announcement of Street Fighter V coming around
 this time, I delved deeper into the technical side of fighting games.
 
+{:.image}
 ![Alt text](assets/img/fs2.jpeg "My Title")
 
 With my anticipation for the game at an all-time high, I decided to make a custom
 PS4 fight stick. Here are some pictures of the process and the final result.
 
+{:.image}
 ![Alt text](assets/img/fs5.jpg "My Title")
 
+{:.image}
 ![Alt text](assets/img/fs4.jpeg "My Title")
 
 Throughout this project I was able to learn a lot about prototyping tools. It was
