@@ -96,6 +96,7 @@ there and eats images.
 
 {:.image}
 ![Alt text](assets/img/AsyncOneWorker.svg "My Title")
+> Structure of Pipeline with one _Crawler_, _Filter_, and _Image Eater_
 
 Changing to a pipelining architecture improved my project and brought crawling on
 my github profile down to 27 seconds.
@@ -123,6 +124,7 @@ channel, which greatly increased the efficiency of my image crawler.
 
 {:.image}
 ![Alt text](assets/img/AsynchMultWorkers.svg "My Title")
+> Structure of Pipeline with multiple _Crawlers_, _Filters_, and one _Image Eater_
 
 Adding multiple crawlers and filters improved the performance of my crawler from
 27 seconds to 4 seconds.
