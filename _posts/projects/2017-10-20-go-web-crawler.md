@@ -28,7 +28,7 @@ as being a practical application.
 
 To gain a better understanding of how much of an improvement Go routines would have
 on my project, I decided to first start writing a non-concurrent, single threaded
-version of my crawler. The overall structure was done like this:
+version of my crawler. The overall structure was done recursively:
 
 {% highlight go %}
 func crawl(urls []string, depth int) []string {
@@ -64,20 +64,19 @@ func crawl(urls []string, depth int) []string {
 While testing this on crawling for images with the base root of my gitHub profile,
 I got the results below:
 
->Image of results screenshot from brute force approach
-
-After creating a synchronous, recursive version of the image crawler, I took a step
-closer to my crawling goals by updating my crawler to work asychronously, but with
-only one filter, crawler, and image collector go routines. This didn't provide much
-of an improvement as seen below.
-
->>Image of gist for asyncrhonous structure
-
->>Image of Results from just asynchronous structure
+>Image of results screenshot from recursive approach
 
 After learning about common design patterns in Go, I thought the pipelining approach
 would be perfect for my web crawler. As the next step in this project, I created
-a basic pipeline design for my web crawler. (More exp. of improvements)
+a basic pipeline design for my web crawler. My pipeline architecture consisted of
+3 main go routines: a _Crawler_, a _Filter_ and a _Image Eater_. The Crawler's job
+is to read an url from it's receiving (input) channel, and return the new links found
+on the page on it's sending (output) channel. As it crawls through every node on a site
+looking for links, it also sends images found to the Image Eating routine. The Filter
+reads in links from its input channel, and determines if the link has already been searched.
+If it has been searched, the filter doesn't send the link forward. The Image Eating routine
+reads all available images that are sent to it. It doesn't send them off anywhere, just sits
+there and eats images.
 
 {% highlight go %}
 // send starting links to worklist
@@ -97,13 +96,15 @@ a basic pipeline design for my web crawler. (More exp. of improvements)
 
 {:.image}
 ![Alt text](assets/img/AsyncOneWorker.svg "My Title")
->>Image of results
+
+Changing to a pipelining architecture improved my project and brought crawling on
+my github profile down to 27 seconds.
+
 {:.image}
 ![Alt text](assets/img/Async-MultCrawlers.png "My Title")
->>Image of gist for structure
 
-Finally, after getting my pipelining design working, I was able to start having
-multiple crawler routines and filter routines quickly read off of the same input
+Finally, after getting my pipelining design working, I was able to start adding
+multiple crawler routines and filter routines to quickly read off of the same input
 channel, which greatly increased the efficiency of my image crawler.
 
 {% highlight go %}
@@ -122,15 +123,16 @@ channel, which greatly increased the efficiency of my image crawler.
 
 {:.image}
 ![Alt text](assets/img/AsynchMultWorkers.svg "My Title")
->>Image of structure
->>Image of results
+
+Adding multiple crawlers and filters improved the performance of my crawler from
+27 seconds to 4 seconds.
+
 {:.image}
 ![Alt text](assets/img/Async-OneCrawler.png "My Title")
 
 There are A LOT of improvements that are still left to make on this image crawler.
 With the excitement of getting a concurrent program working, I let some error-handling
-to pass by, which I'll be adding in soon. I'm currently planning on converting this
-into a better web app by using the Buffalo framework.
+pass by, which I'll be adding in soon.
 
 Thanks for reading about this young Gopher's first project! Expect to have more
 Golang projects coming up!!
