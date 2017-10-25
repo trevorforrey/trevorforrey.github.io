@@ -98,6 +98,8 @@ a basic pipeline design for my web crawler. (More exp. of improvements)
 {:.image}
 ![Alt text](assets/img/AsyncOneWorker.svg "My Title")
 >>Image of results
+{:.image}
+![Alt text](assets/img/Async-MultCrawlers.png "My Title")
 >>Image of gist for structure
 
 Finally, after getting my pipelining design working, I was able to start having
@@ -122,6 +124,8 @@ channel, which greatly increased the efficiency of my image crawler.
 ![Alt text](assets/img/AsynchMultWorkers.svg "My Title")
 >>Image of structure
 >>Image of results
+{:.image}
+![Alt text](assets/img/Async-OneCrawler.png "My Title")
 
 There are A LOT of improvements that are still left to make on this image crawler.
 With the excitement of getting a concurrent program working, I let some error-handling
