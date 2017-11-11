@@ -15,9 +15,9 @@ github-url: web_crawler
 
 After reading the book, _The Go Programming Language_, I had a strong itch to make something using Go.
 I ended up deciding on creating a web crawler, with the attempt to build something
-that fully took advantage of Golang's concurrency model. Read on to learn about
-my process in creating this crawler and some problems I faced during my first Go
-program.
+that fully took advantage of Golang's concurrency model. This project is loosely
+based from a crawler example in the book. Read on to learn about my process in
+creating this crawler and some problems I faced during my first Go program.
 
 The project I worked towards was a web crawler that would output images found
 while crawling. This project seemed fun from a user-experience standpoint as well
@@ -123,14 +123,14 @@ channel, which greatly increased the efficiency of my image crawler.
 {% endhighlight %}
 
 {:.image}
-![Alt text](assets/img/AsynchMultWorkers.svg "My Title")
+![Alt text](assets/img/Async-OneCrawler.png "My Title")
 > Structure of Pipeline with multiple _Crawlers_, _Filters_, and one _Image Eater_
 
 Adding multiple crawlers and filters improved the performance of my crawler from
 27 seconds to 4 seconds.
 
 {:.image}
-![Alt text](assets/img/Async-OneCrawler.png "My Title")
+![Alt text](assets/img/AsynchMultWorkers.svg "My Title")
 
 There are A LOT of improvements that are still left to make on this image crawler.
 With the excitement of getting a concurrent program working, I let some error-handling
