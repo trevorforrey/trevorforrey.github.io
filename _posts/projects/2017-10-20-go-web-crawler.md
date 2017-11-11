@@ -13,7 +13,7 @@ github-url: web_crawler
 {:.image}
 ![Alt text](assets/img/ReadingGopher.svg "My Title")
 
-After reading __ book on Golang, I had a strong itch to make something using Go.
+After reading the book, _The Go Programming Language_, I had a strong itch to make something using Go.
 I ended up deciding on creating a web crawler, with the attempt to build something
 that fully took advantage of Golang's concurrency model. Read on to learn about
 my process in creating this crawler and some problems I faced during my first Go
