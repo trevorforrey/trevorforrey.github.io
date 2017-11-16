@@ -102,7 +102,7 @@ Changing to a pipelining architecture improved my project and brought crawling o
 my github profile down to 27 seconds.
 
 {:.image}
-![Alt text](assets/img/Async-MultCrawlers.png "My Title")
+![Alt text](assets/img/Async-OneCrawler.png "My Title")
 
 Finally, after getting my pipelining design working, I was able to start adding
 multiple crawler routines and filter routines to quickly read off of the same input
@@ -123,7 +123,7 @@ channel, which greatly increased the efficiency of my image crawler.
 {% endhighlight %}
 
 {:.image}
-![Alt text](assets/img/Async-OneCrawler.png "My Title")
+![Alt text](assets/img/Async-MultCrawlers.png "My Title")
 > Structure of Pipeline with multiple _Crawlers_, _Filters_, and one _Image Eater_
 
 Adding multiple crawlers and filters improved the performance of my crawler from
