@@ -21,7 +21,7 @@ via a bluetooth paired web app. The goal is to represent the energy being put
 into travel even when the user is sitting.
 
 **Technology:**
-* Flora
+* Flora Microcontroller
 * Sewable Neopixels
 * GPS Module
 * Bluetooth Feather Board
@@ -108,11 +108,13 @@ My fiance was the best partner ever and made the shirt and pants for the outfit.
 
 The software side of this garment was pretty straightforward, I used the speed gathered
 by a GPS module to determine the speed of the lights underneath the garment. I also used
-I2C to communicate between my bluetooth board with my main Flora board. I also created a
+the I2C protocol to communicate between my bluetooth and main Flora boards. I also created a
 VueJS site that uses Google's Web Bluetooth API to communicate with the bluetooth board.
 
+Both the embedded code and frontend code used can be found on [my github repo]('https://github.com/trevorforrey/web_ble_jacket')
+
 Along with writing all the software, soldering everything together took quite a long time.
-Here are some WIP shots of getting all the lights together.
+Here are some WIP shots of getting all the lights together. (apologies for not rotating them yet).
 
 {:.image}
 ![Alt text](assets/img/subwayShibori/SolderProgress.JPG "My Title")
@@ -125,8 +127,11 @@ Here are some WIP shots of getting all the lights together.
 {:.image}
 ![Alt text](assets/img/subwayShibori/EmbeddedShot.JPG "My Title")
 
+As you can see, integrating all the tech into the garment took quite a lot of space!
+
 # Reflection
 
 I really loved challenging myself creatively while learning how to sew and the basics
-of fashion. I definitely plan on creating future wearable tech project in the future,
-that take advantage of smart materials.
+of fashion. I definitely plan on creating future wearable tech projects in the future,
+that take advantage of smart materials. I would love to create a piece that uses smart
+materials to better embed tech into a garment, instead of having two distinct layers.
