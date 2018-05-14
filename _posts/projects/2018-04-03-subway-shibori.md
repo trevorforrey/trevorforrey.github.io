@@ -3,14 +3,14 @@ layout: project
 title: Subway Shibori
 meta: Fashion + Tech Garment
 category: project
-img-src: assets/img/subwayShibori/runway_shot.jpg
+img-src: assets/img/subwayShibori/runway_shot.png
 content-src: project/2018/04/03/subway-shibori.html
 ---
 
 # Subway Shibori {% include icon-github.html username='trevorforrey' git-url='web_ble_jacket' %}
 
 {:.image}
-![Alt text](assets/img/subwayShibori/runway_shot.JPG "My Title")
+![Alt text](assets/img/subwayShibori/runway_shot.png "My Title")
 
 Subway Shibori is a piece I made in a Fashion+Tech class I recently took. The piece was shown
 at the MRS Materials Research Society Conference held at the Phoenix Convention Center.

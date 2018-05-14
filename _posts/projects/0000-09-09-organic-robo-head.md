@@ -12,16 +12,16 @@ github-url: organic_robo_head
 
 This project was for an Embedded C Programming class I took my Junior year.
 
-My goals for this project was:
+My goals for this project were:
 
 * It didn't look like an embedded project at first glance
 * The user could interact with it
-* The subject of the piece would feel alive
+* The subject of the piece felt alive
 
 {:.image}
 ![Alt text](assets/img/robohead.jpg "My Title")
 
-The project was created using a Raspberry Pi, along with a PWM driver to control the movements of the head and dimming of the LEDS. I also used a capacitive touch sensor to take in
+The project was created using a Raspberry Pi, along with a PWM driver to control the head and dimming of the LEDS. I also used a capacitive touch sensor to take in
 user inputs. I used an I2C bus to communicate to both the touch sensors and the PWM driver.
 
 I used a CAP1818 as the touch sensor and a PCA9685 for the PWM driver. To communicate with
