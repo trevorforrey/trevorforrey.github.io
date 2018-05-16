@@ -16,6 +16,4 @@ _Learning Go Through Illustrations_ is a Medium article I wrote to help solidify
 my understanding of Go's concurrency primitives. It also gave me an excuse to draw
 a bunch of Go Gophers!
 
-If you want to learn about Go, or see some cute gophers, feel free to check it out!
-
-_Article is currently in progress, but should be complete in a couple days!_
+If you want to learn about Go, or see some cute gophers, feel free to [check it out](https://medium.com/@trevor4e/learning-gos-concurrency-through-illustrations-8c4aff603b3)!
