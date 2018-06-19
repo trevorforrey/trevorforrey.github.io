@@ -3,17 +3,21 @@ layout: project
 title: Subway Shibori
 meta: Fashion + Tech Garment
 category: project
-img-src: assets/img/subwayShibori/runway_shot.png
+img-src: assets/img/subwayShibori/gallery_shot.JPG
 content-src: project/2018/04/03/subway-shibori.html
 ---
 
 # Subway Shibori {% include icon-github.html username='trevorforrey' git-url='web_ble_jacket' %}
 
 {:.image}
-![Alt text](assets/img/subwayShibori/runway_shot.png "My Title")
+![Alt text](assets/img/subwayShibori/gallery_shot.JPG "My Title")
 
 Subway Shibori is a piece I made in a Fashion+Tech class I recently took. The piece was shown
-at the MRS Materials Research Society Conference held at the Phoenix Convention Center.
+at the MRS Materials Research Society Conference, held at the Phoenix Convention Center.
+It was also shown at the Scottsdale Fashion Square over the summer.
+
+{:.image}
+![Alt text](assets/img/subwayShibori/runway_shot.png "My Title")
 
 The garment represents the user's current speed through a subway of lights that
 travel along the garment. The wearer is able to control the color of the lights
