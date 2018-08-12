@@ -15,7 +15,7 @@ github-url: web_crawler
 
 After reading the book, _The Go Programming Language_, I had a strong itch to make something using Go.
 I ended up deciding on creating a web crawler, with the attempt to build something
-that fully took advantage of Golang's concurrency model. This project is loosely
+that fully took advantage of Golang's concurrency primitives. This project is loosely
 based from a crawler example in the book. Read on to learn about my process in
 creating this crawler and some problems I faced during my first Go program.
 
@@ -61,37 +61,30 @@ func crawl(urls []string, depth int) []string {
 }
 {% endhighlight %}
 
-While testing this on crawling for images with the base root of my gitHub profile,
-I got the results below:
-
->Image of results screenshot from recursive approach
-
-After learning about common design patterns in Go, I thought the pipelining approach
-would be perfect for my web crawler. As the next step in this project, I created
+This got the job done, but it was pretty slow. For my first step in improvements, I created
 a basic pipeline design for my web crawler. My pipeline architecture consisted of
-3 main go routines: a _Crawler_, a _Filter_ and a _Image Eater_. The Crawler's job
+3 main go routines: a _Crawler_, a _Filter_ and an _Image Eater_. The Crawler's job
 is to read an url from it's receiving (input) channel, and return the new links found
 on the page on it's sending (output) channel. As it crawls through every node on a site
 looking for links, it also sends images found to the Image Eating routine. The Filter
 reads in links from its input channel, and determines if the link has already been searched.
 If it has been searched, the filter doesn't send the link forward. The Image Eating routine
-reads all available images that are sent to it. It doesn't send them off anywhere, just sits
-there and eats images.
+reads all available images that are sent to it.
 
 {% highlight go %}
 // send starting links to worklist
-	baseChan := gen(baseLinks)
-	firstDiscovered := crawler(baseChan, images, writer)
-	nextSet := filter(firstDiscovered, seenLinks)
-	secondDiscovered := crawler(nextSet, images, writer)
-	finalOutput := filter(secondDiscovered, seenLinks)
+baseChan := gen(baseLinks)
+firstDiscovered := crawler(baseChan, images, writer)
+nextSet := filter(firstDiscovered, seenLinks)
+secondDiscovered := crawler(nextSet, images, writer)
+finalOutput := filter(secondDiscovered, seenLinks)
 
-	// Then consume output
-	for linkList := range finalOutput {
-		for _, link := range linkList {
-			resultVars.Links = append(resultVars.Links, link.Url)
-		}
+// Then consume output
+for linkList := range finalOutput {
+	for _, link := range linkList {
+		resultVars.Links = append(resultVars.Links, link.Url)
 	}
+}
 {% endhighlight %}
 
 {:.image}
@@ -110,31 +103,32 @@ channel, which greatly increased the efficiency of my image crawler.
 
 {% highlight go %}
 // Set up pipelines
-	baseChan := gen(baseLinks)
-	crawl1Chan := speedyCrawl(baseChan, images, writer)
-	filter1Chan := speedyFilter(crawl1Chan, seenLinks)
-	crawl2Chan := speedyMerge( // 7 crawling functions)
-	finalOutput := speedyFilter(crawl2Chan, seenLinks)
+baseChan := gen(baseLinks)
+crawl1Chan := speedyCrawl(baseChan, images, writer)
+filter1Chan := speedyFilter(crawl1Chan, seenLinks)
+crawl2Chan := speedyMerge( // 7 crawling functions)
+finalOutput := speedyFilter(crawl2Chan, seenLinks)
 
-	// Consume output
-	for outputLink := range finalOutput {
-		resultVars.Links = append(resultVars.Links, outputLink.Url)
-	}
+// Consume output
+for outputLink := range finalOutput {
+	resultVars.Links = append(resultVars.Links, outputLink.Url)
+}
 {% endhighlight %}
 
 {:.image}
-![Alt text](assets/img/Async-MultCrawlers.png "My Title")
+![Alt text](assets/img/AsynchMultWorkers.svg "My Title")
 > Structure of Pipeline with multiple _Crawlers_, _Filters_, and one _Image Eater_
 
 Adding multiple crawlers and filters improved the performance of my crawler from
 27 seconds to 4 seconds.
 
 {:.image}
-![Alt text](assets/img/AsynchMultWorkers.svg "My Title")
+![Alt text](assets/img/Async-MultCrawlers.png "My Title")
 
-There are A LOT of improvements that are still left to make on this image crawler.
+There are a lot of improvements that are still left to make on this image crawler.
 With the excitement of getting a concurrent program working, I let some error-handling
-pass by, which I'll be adding in soon.
+pass by, which I'll be adding in soon. Since making this project I've also worked a lot in
+VueJS. I'm hoping to make the frontend a lot prettier.
 
-Thanks for reading about this young Gopher's first project! Expect to have more
+Thanks for reading about this Gopher's first project! Expect to have more
 Golang projects coming up!!
