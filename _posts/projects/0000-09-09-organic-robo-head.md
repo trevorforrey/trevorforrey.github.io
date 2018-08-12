@@ -17,12 +17,13 @@ My goals for this project were:
 * Have the piece be interactive and feel alive
 
 {:.image}
-![Alt text](assets/img/robohead.jpg "My Title")
+![Alt text](assets/img/org_robo_design.jpg "My Title")
 
 The design that came out of those self-created requirements was that of a creature you can interact with through capacitive touch sensors.
 Touching the copper boxes in a field would trigger the leds near the box to light up and the eye to move and look at where you touched.
 
-**Image of design**
+{:.image}
+![Alt text](assets/img/org_robo_head_tech_sketch.jpg "My Title")
 
 Technology Used:
 * **Raspberry Pi** - main board
