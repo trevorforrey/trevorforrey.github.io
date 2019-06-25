@@ -13,8 +13,9 @@ layout: default
 
       <div class="project-list-wrap">
         {% for project in site.categories.project %}
-        <div class="project-thumb-container" id="thumb-{{forloop.index}}" data-content="{{project.content-src}}">
+        <div class="project-thumb-container" id="thumb-{{forloop.index}}">
           <div
+          data-content='{{project.content-src}}'
           style="background-image: url({{project.img-src}});
           background-position: center center;
           background-size: cover;
