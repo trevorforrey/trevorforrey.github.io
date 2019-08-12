@@ -1,16 +1,14 @@
 .side-panel {
   justify-content: center;
   text-align: center;
-  float: left;
   color: #8c8c8c;
-  width: 20%;
   height: 100%;
-  margin: auto;
   padding-top: 3em;
   padding-left: 2em;
   padding-right: 2em;
-  min-width: 8em;
-  position: fixed;
+  position: sticky;
+  top: 0em;
+  max-width: 55em;
 
   h2 {
     color: #444;

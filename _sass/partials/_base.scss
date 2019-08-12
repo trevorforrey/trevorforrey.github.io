@@ -1,3 +1,24 @@
+.app {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.project {
+  justify-content: start;
+  display: flex;
+  max-width: 700px;
+}
+
+.project-return {
+  position: sticky;
+  padding-top: 1em;
+  padding-right: 1em;
+  top: 0;
+  height: 2em;
+  width: 2em;
+  margin: 0 !important;
+  opacity: 0.5;
+}
 
 body {
   margin: auto;
@@ -31,13 +52,4 @@ a:hover
      color:#00A0C6;
      text-decoration:none;
      cursor:pointer;
-}
-
-body {
-
-}
-
-.coder {
-  overflow: scroll;
-  max-height: 500px;
 }

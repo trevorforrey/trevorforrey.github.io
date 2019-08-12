@@ -1,6 +1,13 @@
-blockquote {
+.bullet-box {
+  border-style: solid;
+  border-color: #99ebff;
+  justify-content: start;
+  padding: 1em;
 
-  &: p {
-    color: #cecece;
+  span {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5em;
+    letter-spacing: -.0125em;
+    font-size: 1em;
   }
 }
