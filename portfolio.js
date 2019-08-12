@@ -1,8 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
-  const projectReturnButton = document.querySelector('.project-return');
   const projectContainers = document.querySelectorAll('.project-thumb-container');
   const aboutButton = document.querySelector('.about-button');
+  const sidePanel = document.querySelector('.side-panel');
 
+  // Project Loading
   // Slides projects page out of view
   const projectLoadAnimation = function() {
     const projectBelt = document.querySelector('.project-belt');
@@ -17,9 +18,9 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }
-
   // On project thumbnail click
   const onProjectClick = function(event) {
+    // sidePanel.style.display = 'none';
     const projectBelt = document.querySelector('.project-belt');
     let project = event.target;
     const projectData = project.dataset.content;
@@ -33,9 +34,29 @@ document.addEventListener('DOMContentLoaded', function() {
     window.scrollTo(0,0);
     projectLoadAnimation();
   }
-
   // Add event listeners to project thumbnails
   for (let container of projectContainers) {
     container.addEventListener('click', onProjectClick);
   }
 });
+
+// Project Return
+function projectReturnAnimation() {
+  const projectBelt = document.querySelector('.project-belt');
+  let position = -100;
+  let id = setInterval(frame, 0.003);
+  function frame() {
+    if (position === 0) {
+      clearInterval(id);
+    } else {
+      position++;
+      projectBelt.style.left = position + '%';
+    }
+  }
+}
+
+function onProjectReturn() {
+  const projectBelt = document.querySelector('.project-belt');
+  projectReturnAnimation();
+  document.querySelector('.project-return').style.display = 'none';
+}
