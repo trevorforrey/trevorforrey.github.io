@@ -76,10 +76,10 @@ me to test out the sizing of the jacket, as well as plan where I would embed all
 into the piece.
 
 {:.image}
-![Alt text](assets/img/subwayShibori/prototype_mel.JPG "My Title")
+![Alt text](assets/img/subwayShibori/prototype_mel.JPG#50 "My Title")
 
 {:.image}
-![Alt text](assets/img/subwayShibori/muslin_prototype.JPG "My Title")
+![Alt text](assets/img/subwayShibori/muslin_prototype.JPG#50 "My Title")
 
 The biggest part of the whole garment creation was shibori dyeing the outer layer of the jacket.
 It was a full day process, but it was fun learning how to dye fabric and experimenting with different
@@ -89,10 +89,10 @@ techniques.
 ![Alt text](assets/img/subwayShibori/dye_wrap.JPG "My Title")
 
 {:.image}
-![Alt text](assets/img/subwayShibori/dye_shot.JPG "My Title")
+![Alt text](assets/img/subwayShibori/dye_shot.JPG#50 "My Title")
 
 {:.image}
-![Alt text](assets/img/subwayShibori/post_dye.JPG "My Title")
+![Alt text](assets/img/subwayShibori/post_dye.JPG#50 "My Title")
 
 {:.image}
 ![Alt text](assets/img/subwayShibori/final_piece.JPG "My Title")
