@@ -1,11 +1,9 @@
 document.addEventListener('DOMContentLoaded', function() {
   const projectContainers = document.querySelectorAll('.project-thumb-container');
-  const aboutButton = document.querySelector('.about-button');
-  const sidePanel = document.querySelector('.side-panel');
 
   // Project Loading
   // Slides projects page out of view
-  const projectLoadAnimation = function() {
+  projectLoadAnimation = function() {
     const projectBelt = document.querySelector('.project-belt');
     let position = 0;
     let id = setInterval(frame, 0.003);
@@ -18,13 +16,39 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     }
   }
+
   // On project thumbnail click
   const onProjectClick = function(event) {
-    // sidePanel.style.display = 'none';
+    const project = event.target;
+    const projectURL = project.dataset.content;
+    const projectName = getProjectNameFromUrl(projectURL);
+
+    // Update router state
+    pushWindowState(projectName);
+    window.onpopstate = () => onProjectReturn();
+
+    loadProjectData(projectURL);
+    projectLoadAnimation();
+  }
+
+  // Add event listeners to project thumbnails
+  for (let container of projectContainers) {
+    container.addEventListener('click', onProjectClick);
+  }
+
+  // If reloading or searching on a frontend route
+  if (window.location.hash) {
+    const projectName = window.location.hash.slice(1,window.location.hash.length);
+    loadProjectData(projectMap[projectName]);
+
     const projectBelt = document.querySelector('.project-belt');
-    let project = event.target;
-    const projectData = project.dataset.content;
-    fetch(projectData)
+    projectBelt.style.left = '-100%';
+  }
+});
+
+// Loading project data
+function loadProjectData(projectData) {
+  fetch(projectData)
     .then(function(response) {
       return response.text();
     })
@@ -32,13 +56,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.querySelector('.project-load').innerHTML = projectHTML;
     });
     window.scrollTo(0,0);
-    projectLoadAnimation();
-  }
-  // Add event listeners to project thumbnails
-  for (let container of projectContainers) {
-    container.addEventListener('click', onProjectClick);
-  }
-});
+}
 
 // Project Return
 function projectReturnAnimation() {
@@ -56,7 +74,42 @@ function projectReturnAnimation() {
 }
 
 function onProjectReturn() {
+  window.history.pushState(
+    {},
+    '',
+    window.location.origin
+  );
   const projectBelt = document.querySelector('.project-belt');
   projectReturnAnimation();
   document.querySelector('.project-return').style.display = 'none';
+}
+
+function pushWindowState(projectName) {
+  const endURL = projectName ? '/#' + projectName : '';
+  window.history.pushState(
+    {},
+    projectName,
+    window.location.origin + endURL
+  );
+}
+
+function getProjectNameFromUrl(projectURL) {
+  const projectPathSplit = projectURL.split('/');
+  const projectHtmlName = projectPathSplit[projectPathSplit.length - 1];
+  const projectName = projectHtmlName.slice(0,projectHtmlName.length - 5);
+  return projectName;
+}
+
+// Project Map (Allows for frontend routing reload)
+const projectMap = {
+  'fightstick': 'project/0000/07/07/fightstick.html',
+  'python-markov-chain': 'project/0000/08/08/python-markov-chain.html',
+  'organic-robo-head': 'project/0000/09/09/organic-robo-head.html',
+  'go-web-crawler': 'project/2017/10/20/go-web-crawler.html',
+  'subway-shibori': 'project/2018/04/03/subway-shibori.html',
+  'ocelot': 'project/2018/04/28/ocelot.html',
+  'dash-borg': 'project/2018/04/30/dash-borg.html',
+  'learning-go': 'project/2018/05/16/learning-go.html',
+  'morrigan-fightstick': 'project/2018/12/25/morrigan-fightstick.html',
+  'deep-space-visualizer': 'project/2019/04/30/deep-space-visualizer.html'
 }
