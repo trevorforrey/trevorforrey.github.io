@@ -1,6 +1,13 @@
 .main-area {
-  display: inline-block;
   padding-top: 0.8rem;
   vertical-align: middle;
-  overflow: auto;
+}
+
+.project-head {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  background-color: white;
 }

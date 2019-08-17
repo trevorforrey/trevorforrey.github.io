@@ -8,15 +8,16 @@
   padding-right: 2em;
   position: sticky;
   top: 0em;
-  max-width: 55em;
+  width: 15em;
+  min-width: 15em;
 
   h2 {
     color: #444;
   }
 
   p {
-    padding-left: 1.25rem;
-    padding-right: 1.25rem;
+    // padding-left: 1.25rem;
+    // padding-right: 1.25rem;
   }
 
   .avatar {
