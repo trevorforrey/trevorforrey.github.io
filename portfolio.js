@@ -27,6 +27,9 @@ document.addEventListener('DOMContentLoaded', function() {
     pushWindowState(projectName);
     window.onpopstate = () => onProjectReturn();
 
+    // Toggle project data visibility
+    document.querySelector('.project-container').style.display = 'block';
+
     loadProjectData(projectURL);
     projectLoadAnimation();
   }
@@ -74,11 +77,9 @@ function projectReturnAnimation() {
 }
 
 function onProjectReturn() {
-  window.history.pushState(
-    {},
-    '',
-    window.location.origin
-  );
+  pushWindowState('');
+  // Toggle project data visibility
+  document.querySelector('.project-container').style.display = 'none';
   const projectBelt = document.querySelector('.project-belt');
   projectReturnAnimation();
   document.querySelector('.project-return').style.display = 'none';
