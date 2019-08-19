@@ -1,0 +1,32 @@
+
+@media only screen and (max-width: 600px) {
+  body .navigation-bar {
+    height: 3rem;
+    background-color: #F8F8FB;
+  }
+  body .side-panel {
+    display: none;
+  }
+  body .nav-name {
+    display: inline-block;
+    float: left;
+    padding-top: 0.75em;
+    padding-left: 0.5em;
+  }
+  body .nav {
+    display: inline-block;
+  }
+  body .project-thumb-container {
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  body .nav-name {
+    display: none;
+  }
+  body .nav {
+    display: none;
+  }
+
+}
