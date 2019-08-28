@@ -1,0 +1,23 @@
+.navigation-item {
+  display: inline-block;
+  padding-top: 0.25em;
+  padding-bottom: 0.25em;
+  background-color: white;
+  cursor: pointer;
+}
+
+.aboutme {
+  display: none;
+}
+
+.navigation {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: white;
+
+  h2 {
+    margin-top: 0.25em;
+    margin-bottom: 0.25em;
+  }
+}

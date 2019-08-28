@@ -27,20 +27,14 @@
       font-family: 'Open Sans', sans-serif;
     }
 
+    .side-panel {
+      display: none;
+    }
+
     .main-area {
       margin: auto;
       width: 100%;
       padding: 0rem;
-    }
-
-    .project-head {
-      position: sticky;
-      top: 0;
-      z-index: 1;
-      padding-top: 0.25em;
-      padding-bottom: 0.25em;
-      padding-left: 0.7em;
-      background-color: white;
     }
   }
 }

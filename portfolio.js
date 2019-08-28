@@ -47,6 +47,12 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectBelt = document.querySelector('.project-belt');
     projectBelt.style.left = '-100%';
   }
+
+  // Add navigation events
+  const navItems = document.querySelectorAll('.navigation-item');
+  for (let navItem of navItems) {
+    navItem.addEventListener('click', onNavClick);
+  }
 });
 
 // Loading project data
@@ -99,6 +105,45 @@ function getProjectNameFromUrl(projectURL) {
   const projectHtmlName = projectPathSplit[projectPathSplit.length - 1];
   const projectName = projectHtmlName.slice(0,projectHtmlName.length - 5);
   return projectName;
+}
+
+// On navigation item click
+function onNavClick(event) {
+  // set all colors back to default
+  const allNavItems = document.querySelectorAll('.navigation-item');
+  for (let navItem of allNavItems) {
+    navItem.style.color = '#c2c2c2'; // was 8c8c8c
+  }
+
+  // set src element color
+  event.srcElement.style.color = '#8c8c8c';
+
+  // update current content on screen
+  switch (event.srcElement.innerText) {
+    case 'Projects': {
+      if (window.location.hash) {
+        onProjectReturn();
+      }
+      // If on mobile or tablet site, rearrange the dom
+      const portfolio = document.querySelector('.portfolio');
+      if (portfolio.style.display === 'none') {
+        const app = document.querySelector('.app');
+        const sidePanelContent = document.querySelector('.side-panel');
+        app.prepend(sidePanelContent);
+        sidePanelContent.style.display = 'none';
+        portfolio.style.display = 'block';
+      }
+      break;
+    }
+    case 'About Me': {
+      document.querySelector('.portfolio').style.display = 'none';
+      const mainArea = document.querySelector('.main-area');
+      const sidePanelContent = document.querySelector('.side-panel');
+      mainArea.appendChild(sidePanelContent);
+      sidePanelContent.style.display = 'block';
+      break;
+    }
+  }
 }
 
 // Project Map (Allows for frontend routing reload)
