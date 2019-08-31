@@ -12,9 +12,9 @@ content-src: project/2018/04/03/subway-shibori.html
 {:.image}
 ![Alt text](assets/img/subwayShibori/gallery_shot.JPG "My Title")
 
-Subway Shibori is a piece I made in a Fashion+Tech class I recently took. The piece was shown
+Subway Shibori is a piece I made in a Fashion+Tech class I took. The piece was shown
 at the MRS Materials Research Society Conference, held at the Phoenix Convention Center.
-It was also shown at the Scottsdale Fashion Square over the summer.
+It was also shown at the Scottsdale Fashion Square.
 
 {:.image}
 ![Alt text](assets/img/subwayShibori/runway_shot.png "My Title")
@@ -42,7 +42,7 @@ this piece, I'll go into detail below!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nRnUgiD-eZY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tQkDqPtIQPA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dZ1LrMXEA9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dZ1LrMXEA9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 # Concept
 
@@ -76,10 +76,10 @@ me to test out the sizing of the jacket, as well as plan where I would embed all
 into the piece.
 
 {:.image}
-![Alt text](assets/img/subwayShibori/prototype_mel.JPG "My Title")
+![Alt text](assets/img/subwayShibori/prototype_mel.JPG#50 "My Title")
 
 {:.image}
-![Alt text](assets/img/subwayShibori/muslin_prototype.JPG "My Title")
+![Alt text](assets/img/subwayShibori/muslin_prototype.JPG#50 "My Title")
 
 The biggest part of the whole garment creation was shibori dyeing the outer layer of the jacket.
 It was a full day process, but it was fun learning how to dye fabric and experimenting with different
@@ -89,10 +89,10 @@ techniques.
 ![Alt text](assets/img/subwayShibori/dye_wrap.JPG "My Title")
 
 {:.image}
-![Alt text](assets/img/subwayShibori/dye_shot.JPG "My Title")
+![Alt text](assets/img/subwayShibori/dye_shot.JPG#50 "My Title")
 
 {:.image}
-![Alt text](assets/img/subwayShibori/post_dye.JPG "My Title")
+![Alt text](assets/img/subwayShibori/post_dye.JPG#50 "My Title")
 
 {:.image}
 ![Alt text](assets/img/subwayShibori/final_piece.JPG "My Title")

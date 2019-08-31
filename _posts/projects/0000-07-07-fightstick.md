@@ -12,17 +12,15 @@ content-src: project/0000/07/07/fightstick.html
 {:.image}
 ![Alt text](assets/img/chun-slight-speed-down.gif "My Title")
 
-A couple years ago, I got really into Street Fighter: Third Strike. Third Strike
-is so stylized, emotional, and fast, that I got hooked playing one summer with
-my girlfriend. Playing Third Strike really opened up a new world for me when it
-comes to fighting games. With the announcement of Street Fighter V coming around
-this time, I delved deeper into the technical side of fighting games.
+A couple years ago, I got really into Street Fighter: Third Strike. I got hooked playing
+one summer with my now Fiancee. Playing Third Strike really opened me up to the world of fighting games. With the announcement of Street Fighter V coming around
+this time, I delved deeper into the hardware side of fighting games.
 
 {:.image}
 ![Alt text](assets/img/fs2.jpeg "My Title")
 
-With my anticipation for the game at an all-time high, I decided to make a custom
-PS4 fight stick. Here are some pictures of the process and the final result.
+With my anticipation for SFV at an all-time high, I decided to make a custom
+fight stick. Here are some pictures of the process and the final result.
 
 {:.image}
 ![Alt text](assets/img/fs5.jpg "My Title")

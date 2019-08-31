@@ -1,0 +1,25 @@
+@media only screen and (max-width: 1023px) and (min-width: 601px) {
+  body .project-title {
+    font-size: 0.75rem;
+    line-height: 1.875rem;
+    height: 1.875rem;
+  }
+
+  body .project-thumb-container {
+    width: 14em;
+    height: 21em;
+    margin-right: 1em;
+    margin-bottom: 2rem;
+    float: left;
+
+    img {
+      width: 14em;
+      height: 18.5em;
+      text-align: center;
+    }
+
+    &:hover .project-title{
+      color: #333;
+    }
+  }
+}
