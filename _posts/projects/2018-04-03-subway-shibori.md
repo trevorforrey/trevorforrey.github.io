@@ -12,9 +12,9 @@ content-src: project/2018/04/03/subway-shibori.html
 {:.image}
 ![Alt text](assets/img/subwayShibori/gallery_shot.JPG "My Title")
 
-Subway Shibori is a piece I made in a Fashion+Tech class I recently took. The piece was shown
+Subway Shibori is a piece I made in a Fashion+Tech class I took. The piece was shown
 at the MRS Materials Research Society Conference, held at the Phoenix Convention Center.
-It was also shown at the Scottsdale Fashion Square over the summer.
+It was also shown at the Scottsdale Fashion Square.
 
 {:.image}
 ![Alt text](assets/img/subwayShibori/runway_shot.png "My Title")
@@ -42,7 +42,7 @@ this piece, I'll go into detail below!
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/nRnUgiD-eZY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 <iframe width="560" height="315" src="https://www.youtube.com/embed/tQkDqPtIQPA" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dZ1LrMXEA9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/dZ1LrMXEA9M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 # Concept
 
