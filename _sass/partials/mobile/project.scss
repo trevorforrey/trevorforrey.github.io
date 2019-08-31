@@ -10,6 +10,12 @@
     width: 100%;
     margin: 0px auto;
 
+    ul {
+      font-size: 1em;
+      list-style-position: inside;
+      padding-left: 2em;
+    }
+
     p:not(.image) {
       font-size: 1em;
       padding-right: 1em;
@@ -24,10 +30,6 @@
     h1 {
       font-size: 1.4em;
       padding-left: 0.7em;
-    }
-
-    ul {
-      padding-left: 1em;
     }
 
     img[src*='#large-img'] {

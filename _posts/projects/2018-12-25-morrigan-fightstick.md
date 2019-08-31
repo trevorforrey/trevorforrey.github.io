@@ -18,20 +18,15 @@ have a high quality fightstick to play on. For Christmas I wanted to make her a 
 {:.image}
 ![Alt text](assets/img/morriganStick/frontFinal.JPG "My Title")
 
-<div class='bullet-box'>
-  <span>Hardware:</span>
-  <ul>
-    <li>Buttons: Sanwa OBSF 24/30mm</li>
-    <li>Buttons: Sanwa OBSF 24/30mm</li>
-    <li>PCB: IST Pre-installed Brook Board</li>
-  </ul>
-  <span>Box:</span>
-  <ul>
-    <li>Sides: Maple (w/ laser etching)</li>
-    <li>Wood Top: Birch (w/ laser etching)</li>
-    <li>op & Bottom: Clear Acrylic</li>
-  </ul>
-</div>
+Hardware:
+* **Buttons:** Sanwa OBSF 24/30mm
+* **PCB:** IST Pre-installed Brook Board
+
+Box:
+* **Sides:** Maple (w/ laser etching)
+* **Wood Top:** Birch (w/ laser etching)
+* **top & Bottom:** Clear Acrylic
+
 
 **Progress Pictures**
 
