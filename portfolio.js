@@ -1,3 +1,5 @@
+const deployed = true;
+
 document.addEventListener('DOMContentLoaded', function() {
   const projectContainers = document.querySelectorAll('.project-thumb-container');
 
@@ -92,11 +94,12 @@ function onProjectReturn() {
 }
 
 function pushWindowState(projectName) {
+  const gitHubFix = deployed ? '/portfolio' : ''
   const endURL = projectName ? '/#' + projectName : '';
   window.history.pushState(
     {},
     projectName,
-    window.location.origin + endURL
+    window.location.origin + gitHubFix + endURL
   );
 }
 
