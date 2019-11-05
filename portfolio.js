@@ -160,6 +160,5 @@ const projectMap = {
   'dash-borg': 'project/2018/04/30/dash-borg.html',
   'learning-go': 'project/2018/05/16/learning-go.html',
   'morrigan-fightstick': 'project/2018/12/25/morrigan-fightstick.html',
-  'deep-space-visualizer': 'project/2019/04/30/deep-space-visualizer.html',
-  'japan-map': 'project/0000/09/03/japan-map.html'
+  'deep-space-visualizer': 'project/2019/04/30/deep-space-visualizer.html'
 }
