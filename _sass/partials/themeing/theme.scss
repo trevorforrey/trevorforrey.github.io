@@ -1,0 +1,13 @@
+$background-color: #1C1C28;
+$background-secondary-color: #28293D;
+$background-dark-color: #0F0F10;
+$accent-color: #F2B705;
+
+$default-text-color: #ffff;
+
+$footer-background: $background-secondary-color;
+
+@mixin primary-text {
+  color: $default-text-color;
+  opacity: 87%;
+};
