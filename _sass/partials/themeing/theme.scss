@@ -11,3 +11,8 @@ $footer-background: $background-secondary-color;
   color: $default-text-color;
   opacity: 87%;
 };
+
+@mixin secondary-text {
+  color: $default-text-color;
+  opacity: 75%;
+}

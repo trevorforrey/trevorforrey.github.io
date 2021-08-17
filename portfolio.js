@@ -1,4 +1,4 @@
-const deployed = true;
+const deployed = false;
 
 document.addEventListener('DOMContentLoaded', function() {
   const projectContainers = document.querySelectorAll('.project-thumb-container');
@@ -152,7 +152,6 @@ function onNavClick(event) {
 // Project Map (Allows for frontend routing reload)
 const projectMap = {
   'fightstick': 'project/0000/07/07/fightstick.html',
-  'python-markov-chain': 'project/0000/08/08/python-markov-chain.html',
   'organic-robo-head': 'project/0000/09/09/organic-robo-head.html',
   'go-web-crawler': 'project/2017/10/20/go-web-crawler.html',
   'subway-shibori': 'project/2018/04/03/subway-shibori.html',

@@ -1,0 +1,10 @@
+<svg version="1.2" baseProfile="tiny-ps" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+	<title>ic_arrow_back_black_24px-svg</title>
+	<style>
+		tspan { white-space:pre }
+		.shp0 { fill: none } 
+		.shp1 { fill: #ffffff } 
+	</style>
+	<path id="Layer" class="shp0" d="M0 0L24 0L24 24L0 24L0 0Z" />
+	<path id="Layer" class="shp1" d="M20 11L7.83 11L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13L20 13L20 11Z" />
+</svg>

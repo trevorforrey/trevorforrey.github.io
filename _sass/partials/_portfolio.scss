@@ -10,23 +10,12 @@
 .project-list-wrap {
   width: 50%;
   float: left;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 16px 16px;
-  grid-auto-flow: row;
-  grid-template-areas:
-    ". . ."
-    ". . ."
-    ". . .";
 }
 
 .project-thumb-container {
-  margin-right: 1em;
-  margin-bottom: 2rem;
-  // float: left;
-
-
+  margin-right: 2.5em;
+  margin-bottom: 2.5em;
+  float: left;
 
   &:hover img {
     width: 14em;
@@ -53,7 +42,7 @@
   p {
     margin-top: 16px;
     margin-bottom: 1.5em;
-    color: #444;
+    // color: #444;
   }
 
   img {
@@ -75,8 +64,13 @@
   max-width: 650px;
   margin: 0px auto;
 
-  p {
+  p:not(.image) {
+    @include primary-text;
     font-size: 1.15em;
+  }
+
+  h1, h2, h3, strong {
+    @include primary-text;
   }
 
   ul {

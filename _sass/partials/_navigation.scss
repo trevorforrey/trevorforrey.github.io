@@ -5,6 +5,10 @@
   padding-bottom: 0.25em;
   background-color: $background-color;
   cursor: pointer;
+
+  &:hover {
+    @include secondary-text;
+  }
 }
 
 .aboutme {
