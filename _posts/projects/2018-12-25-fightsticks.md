@@ -1,18 +1,20 @@
 ---
 layout: project
-title: Morrigan Fight Stick
+title: Fight Sticks
 meta: Arcade Fight Stick for PS3/PS4
 category: project
 img-src: assets/img/morriganStick/frontFinal.JPG
-content-src: project/2018/12/25/morrigan-fightstick.html
+content-src: project/2018/12/25/fightsticks.html
 ---
 
 {% include project-header.html
   background-img-src='assets/img/morriganStick/morrigan-background.png'
   project-title='Fight Sticks'
-  project-description='Fight sticks I\'ve created.'
+  project-description='Arcade fight sticks I\'ve made over the years.'
   accent-color='142,44,155'
 %}
+
+# Darkstalkers Themed Stick (2019)
 
 {:.image}
 ![Alt text](assets/img/morriganStick/morrigan-darkstalkers.jpg "My Title")
@@ -55,3 +57,29 @@ On the inside of the stick, I laser etched a morrigan illustration from a Darkst
 
 {:.image}
 ![Alt text](assets/img/morriganStick/inside.JPG "My Title")
+
+# Street Fighter Themed Stick (2016)
+
+{:.image}
+![Alt text](assets/img/chun-slight-speed-down.gif "My Title")
+
+A couple years ago, I got really into Street Fighter: Third Strike. I got hooked playing
+one summer with my now Fiancee. Playing Third Strike really opened me up to the world of fighting games. With the announcement of Street Fighter V coming around
+this time, I delved deeper into the hardware side of fighting games.
+
+{:.image}
+![Alt text](assets/img/fs2.jpeg "My Title")
+
+With my anticipation for SFV at an all-time high, I decided to make a custom
+fight stick. Here are some pictures of the process and the final result.
+
+{:.image}
+![Alt text](assets/img/fs5.jpg "My Title")
+
+{:.image}
+![Alt text](assets/img/fs4.jpeg "My Title")
+
+Throughout this project I was able to learn a lot about prototyping tools. It was
+also nice being able to do some graphic design for the collage on the face of
+the stick. When I made this I was pretty crazy about Street Fighter and I'm glad
+I was able to learn something and be productive through my excitement of the series.

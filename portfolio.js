@@ -146,13 +146,12 @@ function onNavClick(event) {
 
 // Project Map (Allows for frontend routing reload)
 const projectMap = {
-  'fightstick': 'project/0000/07/07/fightstick.html',
   'organic-robo-head': 'project/0000/09/09/organic-robo-head.html',
   'go-web-crawler': 'project/2017/10/20/go-web-crawler.html',
   'subway-shibori': 'project/2018/04/03/subway-shibori.html',
   'ocelot': 'project/2018/04/28/ocelot.html',
   'dash-borg': 'project/2018/04/30/dash-borg.html',
   'learning-go': 'project/2018/05/16/learning-go.html',
-  'morrigan-fightstick': 'project/2018/12/25/morrigan-fightstick.html',
+  'fightsticks': 'project/2018/12/25/fightsticks.html',
   'deep-space-visualizer': 'project/2019/04/30/deep-space-visualizer.html'
 }
