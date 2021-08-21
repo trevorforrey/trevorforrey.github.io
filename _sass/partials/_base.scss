@@ -9,7 +9,7 @@
 .project {
   justify-content: start;
   display: flex;
-  max-width: 700px;
+  max-width: 1200px;
 }
 
 .project-return {
@@ -21,6 +21,7 @@
   width: 2em;
   margin: 0 !important;
   opacity: 0.5;
+  cursor: pointer;
 }
 
 body {

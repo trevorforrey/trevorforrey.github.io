@@ -7,7 +7,12 @@ img-src: assets/img/deepSpaceVisualizer/EarthView.png
 content-src: project/2019/04/30/deep-space-visualizer.html
 ---
 
-# Deep Space Visualizer
+{% include project-header.html
+  background-img-src='assets/img/deepSpaceVisualizer/PathView-background.png'
+  project-title='Deep Space Visualizer'
+  project-description='3D satellite launch visualizer'
+  accent-color='51,51,51'
+%}
 
 {:.image}
 ![Alt text](assets/img/deepSpaceVisualizer/PathView.png "My Title")

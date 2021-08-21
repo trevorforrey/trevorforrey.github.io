@@ -8,7 +8,13 @@ content-src: project/0000/09/09/organic-robo-head.html
 github-url: organic_robo_head
 ---
 
-# Organic Robo Head {% include icon-github.html username='trevorforrey' git-url='organic_robo_head' %}
+{% include project-header.html
+  background-img-src='assets/img/robohead-background.png'
+  project-title='Organic Robo Head'
+  project-description='Interactive art piece.'
+  accent-color='152,173,94'
+  git-url='organic_robo_head'
+%}
 
 This project was for an Embedded C Programming class I took in college.
 

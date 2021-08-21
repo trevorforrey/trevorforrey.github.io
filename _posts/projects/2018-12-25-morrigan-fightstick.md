@@ -7,7 +7,12 @@ img-src: assets/img/morriganStick/frontFinal.JPG
 content-src: project/2018/12/25/morrigan-fightstick.html
 ---
 
-# Morrigan Fight Stick
+{% include project-header.html
+  background-img-src='assets/img/morriganStick/morrigan-background.png'
+  project-title='Fight Sticks'
+  project-description='Fight sticks I\'ve created.'
+  accent-color='142,44,155'
+%}
 
 {:.image}
 ![Alt text](assets/img/morriganStick/morrigan-darkstalkers.jpg "My Title")

@@ -8,9 +8,12 @@
 }
 
 .project-list-wrap {
-  padding: 2em;
   width: 50%;
   float: left;
+}
+
+.project-list-padding-wrap {
+  padding: 2em;
 }
 
 .project-thumb-container {
@@ -62,7 +65,7 @@
   padding-bottom: 1rem;
   padding-left: 1rem;
   padding-right: 1rem;
-  max-width: 650px;
+  max-width: 1200px;
   margin: 0px auto;
 
   p:not(.image) {

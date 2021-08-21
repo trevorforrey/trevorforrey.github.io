@@ -7,25 +7,27 @@ layout: default
     <div class="portfolio">
       <div class="project-belt">
         <div class="project-list-wrap">
-          {% for project in site.categories.project %}
-          <div class="project-thumb-container" id="thumb-{{forloop.index}}">
-            <div
-            data-content='{{project.content-src}}'
-            style="background-image: url({{project.img-src}});
-            background-position: center center;
-            background-size: cover;
-            cursor: pointer;
-            width: 14em;
-            height: 14em;
-            border-radius: 25px;
-            box-shadow: 0px 0px 8px 1px rgb(0, 0, 0);"
-            ></div>
-            <div class="project-title">
-              <strong>{{project.title}}</strong>
+          <div class="project-list-padding-wrap">
+            {% for project in site.categories.project %}
+            <div class="project-thumb-container" id="thumb-{{forloop.index}}">
+              <div
+              data-content='{{project.content-src}}'
+              style="background-image: url({{project.img-src}});
+              background-position: center center;
+              background-size: cover;
+              cursor: pointer;
+              width: 14em;
+              height: 14em;
+              border-radius: 25px;
+              box-shadow: 0px 0px 8px 1px rgb(0, 0, 0);"
+              ></div>
+              <div class="project-title">
+                <strong>{{project.title}}</strong>
+              </div>
             </div>
+            {% endfor %}
+            </ul>
           </div>
-          {% endfor %}
-          </ul>
         </div>
         <div class="project-wrap">
           <div class="project-container">

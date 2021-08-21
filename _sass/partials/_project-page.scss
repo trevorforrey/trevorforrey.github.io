@@ -16,3 +16,54 @@
   font-family: monospace;
   background-color: $background-secondary-color;
 }
+
+.project-load {
+  display: flex;
+  justify-content: center;
+}
+
+.project-banner-wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.project-header {
+  background-size: cover;
+  background-position: center;
+  height: 12em;
+  align-items: center;
+}
+
+.project-banner {
+  background-size: cover;
+  background-position: center;
+  height: 12em;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.project-banner-overlay {
+  display: flex;
+  z-index: 10;
+}
+
+.project-header-title {
+  display: flex;
+  align-items: center;
+
+  .project-actual-title {
+    display: flex;
+    font-size: 50;
+    margin-right: 12px;
+  }
+}
+
+.project-header-description {
+  padding-left: 2em;
+  display: block;
+  color: #ffff;
+}

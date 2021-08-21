@@ -1,13 +1,22 @@
 ---
 layout: project
 title: Subway Shibori
+description: An embedded tech jacket inspired by the subways in Tokyo.
 meta: Fashion + Tech Garment
 category: project
 img-src: assets/img/subwayShibori/gallery_shot.JPG
+background-img-src: assets/img/subwayShibori/final_piece copy.png
+accent-color: 209,136,48
 content-src: project/2018/04/03/subway-shibori.html
 ---
 
-# Subway Shibori {% include icon-github.html username='trevorforrey' git-url='web_ble_jacket' %}
+{% include project-header.html
+  background-img-src='assets/img/subwayShibori/final_piece copy.png'
+  project-title='Subway Shibori'
+  project-description='An embedded tech jacket inspired by the subways in Tokyo.'
+  accent-color='243,156,107'
+  git-url='web_ble_jacket'
+%}
 
 {:.image}
 ![Alt text](assets/img/subwayShibori/gallery_shot.JPG "My Title")
