@@ -131,9 +131,6 @@ function onNavClick(event) {
       const portfolio = document.querySelector('.portfolio');
       if (portfolio.style.display === 'none') {
         const app = document.querySelector('.app');
-        const sidePanelContent = document.querySelector('.side-panel');
-        app.prepend(sidePanelContent);
-        sidePanelContent.style.display = 'none';
         portfolio.style.display = 'block';
       }
       break;
@@ -141,9 +138,7 @@ function onNavClick(event) {
     case 'About Me': {
       document.querySelector('.portfolio').style.display = 'none';
       const mainArea = document.querySelector('.main-area');
-      const sidePanelContent = document.querySelector('.side-panel');
       mainArea.appendChild(sidePanelContent);
-      sidePanelContent.style.display = 'block';
       break;
     }
   }

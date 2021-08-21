@@ -3,7 +3,8 @@
   display: inline-block;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
-  background-color: $background-color;
+  margin-right: 1em;
+  background-color: $footer-background;
   cursor: pointer;
 
   &:hover {
@@ -16,13 +17,43 @@
 }
 
 .navigation {
+  display: flex;
+  align-items: center;
   position: sticky;
+  padding: 8px;
   top: 0;
   z-index: 1;
-  background-color: $background-color;
+  background-color: $footer-background;
 
   h2 {
     margin-top: 0.25em;
     margin-bottom: 0.25em;
   }
+}
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 2em;
+  height: 2em;
+  margin: 8px;
+}
+
+img {
+  display: inline;
+  height: 100%;
+  width: auto;
+}
+
+.name-and-face {
+  display: flex;
+  align-items: center;
+  margin-right: 8em;
+}
+
+.name {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  margin-left: 0.5em;
 }
