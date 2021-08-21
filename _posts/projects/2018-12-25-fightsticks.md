@@ -29,6 +29,12 @@ Hardware:
 * **Joystick:** Hori Hayabusa
 * **Buttons:** Sanwa OBSF 24/30mm
 * **PCB:** IST Pre-installed Brook Board
+<!--
+| Joystick | Hori Hayabusa                 |
+|----------|-------------------------------|
+| Buttons  | Sanwa OBSF 24/30mm            |
+| PCB      | IST Pre-installed Brook Board |
+|          |                               | -->
 
 Box:
 * **Sides:** Maple (w/ laser etching)

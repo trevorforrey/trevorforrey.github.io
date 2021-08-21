@@ -8,10 +8,13 @@ content-src: project/2017/10/20/go-web-crawler.html
 github-url: web_crawler
 ---
 
-# Go Web Crawler {% include icon-github.html username='trevorforrey' git-url='web_crawler' %}
-
-{:.image}
-![Alt text](assets/img/ReadingGopher.svg "My Title")
+{% include project-header.html
+  background-img-src='assets/img/ReadingGopher.svg'
+  project-title='Go Web Crawler'
+  project-description='Webcrawler created while learning Go.'
+  accent-color='152,217,237'
+	git-url='web_crawler'
+%}
 
 After reading the book, _The Go Programming Language_, I had a strong itch to make something using Go.
 I ended up deciding on creating a web crawler, with the attempt to build something
