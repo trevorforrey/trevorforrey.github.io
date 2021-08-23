@@ -67,3 +67,22 @@
   display: block;
   color: #ffff;
 }
+
+.sticky-project-header {
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 64;
+  align-self: flex-start;
+  height: 3em;
+  width: 100%;
+  z-index: 12;
+
+  .sticky-project-header-name {
+    display: flex;
+  }
+}
+
+.hidden {
+  visibility: hidden;
+}

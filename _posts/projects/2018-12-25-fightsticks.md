@@ -14,6 +14,11 @@ content-src: project/2018/12/25/fightsticks.html
   accent-color='142,44,155'
 %}
 
+{% include project-sticky-header.html
+  project-title='Fight Sticks'
+  accent-color='142,44,155'
+%}
+
 # Darkstalkers Themed Stick (2019)
 
 {:.image}

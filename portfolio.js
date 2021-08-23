@@ -1,5 +1,58 @@
 const deployed = false;
 
+function isElementInView(element, fullyInView) {
+  var pageTop = window.scrollTop();
+  var pageBottom = pageTop + window.height();
+  const elementNode = document.querySelector(element);
+  var elementTop = elementNode.offset().top;
+  var elementBottom = elementTop + elementNode.height();
+
+  if (fullyInView === true) {
+      return ((pageTop < elementTop) && (pageBottom > elementBottom));
+  } else {
+      return ((elementTop <= pageBottom) && (elementBottom >= pageTop));
+  }
+}
+
+function onWorkDetailScroll() {
+  // If you're viewing a project check to see if banner is hidden
+  if (window.location.href) {
+    const windowScroll = window.scrollY;
+    const projectHeader = document.querySelector('.project-header');
+    const projectHeight = projectHeader.clientHeight;
+    // Header is hidden - show the sticky header
+    if (windowScroll > projectHeight) {
+      console.log('hidden');
+      const stickyProjectHeaderNode = document.querySelector('.sticky-project-header');
+      if (stickyProjectHeaderNode.className.includes('hidden')) {
+        stickyProjectHeaderNode.classList.remove('hidden');
+      }
+    // Header is showing - hide the sticky header
+    } else {
+      console.log('showing!');
+      const stickyProjectHeaderNode = document.querySelector('.sticky-project-header');
+      if (!stickyProjectHeaderNode.className.includes('hidden')) {
+        stickyProjectHeaderNode.classList.add('hidden');
+      }
+    }
+  }
+}
+
+const onTabSelect = function(sectionSelected) {
+  const allNavigationItems = document.querySelectorAll('.navigation-item');
+  allNavigationItems.forEach((navigationItem) => {
+    if (!navigationItem.className.includes(sectionSelected)) {
+      navigationItem.classList.remove('selected');
+    } else {
+      navigationItem.classList.add('selected');
+    }
+  });
+
+  onProjectReturn();
+}
+
+document.addEventListener('scroll', function() { onWorkDetailScroll() });
+
 document.addEventListener('DOMContentLoaded', function() {
   const projectContainers = document.querySelectorAll('.project-thumb-container');
 
@@ -49,12 +102,6 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectBelt = document.querySelector('.project-belt');
     projectBelt.style.left = '-100%';
   }
-
-  // Add navigation events
-  const navItems = document.querySelectorAll('.navigation-item');
-  for (let navItem of navItems) {
-    navItem.addEventListener('click', onNavClick);
-  }
 });
 
 // Loading project data
@@ -85,12 +132,14 @@ function projectReturnAnimation() {
 }
 
 function onProjectReturn() {
-  pushWindowState('');
-  // Toggle project data visibility
-  document.querySelector('.project-container').style.display = 'none';
-  const projectBelt = document.querySelector('.project-belt');
-  projectReturnAnimation();
-  document.querySelector('.project-return').style.display = 'none';
+  if (window.location.hash) {
+    pushWindowState('');
+    // Toggle project data visibility
+    document.querySelector('.project-container').style.display = 'none';
+    const projectBelt = document.querySelector('.project-belt');
+    projectReturnAnimation();
+    document.querySelector('.project-return').style.display = 'none';
+  }
 }
 
 function pushWindowState(projectName) {
@@ -108,40 +157,6 @@ function getProjectNameFromUrl(projectURL) {
   const projectHtmlName = projectPathSplit[projectPathSplit.length - 1];
   const projectName = projectHtmlName.slice(0,projectHtmlName.length - 5);
   return projectName;
-}
-
-// On navigation item click
-function onNavClick(event) {
-  // set all colors back to default
-  const allNavItems = document.querySelectorAll('.navigation-item');
-  for (let navItem of allNavItems) {
-    navItem.style.color = '#c2c2c2'; // was 8c8c8c
-  }
-
-  // set src element color
-  event.srcElement.style.color = '#8c8c8c';
-
-  // update current content on screen
-  switch (event.srcElement.innerText) {
-    case 'Projects': {
-      if (window.location.hash) {
-        onProjectReturn();
-      }
-      // If on mobile or tablet site, rearrange the dom
-      const portfolio = document.querySelector('.portfolio');
-      if (portfolio.style.display === 'none') {
-        const app = document.querySelector('.app');
-        portfolio.style.display = 'block';
-      }
-      break;
-    }
-    case 'About Me': {
-      document.querySelector('.portfolio').style.display = 'none';
-      const mainArea = document.querySelector('.main-area');
-      mainArea.appendChild(sidePanelContent);
-      break;
-    }
-  }
 }
 
 // Project Map (Allows for frontend routing reload)

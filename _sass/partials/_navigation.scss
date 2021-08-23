@@ -6,10 +6,16 @@
   margin-right: 1em;
   background-color: $footer-background;
   cursor: pointer;
+  border-bottom: 2px solid rgba(170, 50, 220, 0);
 
   &:hover {
     @include secondary-text;
+    border-bottom: 2px solid #ffff;
   }
+}
+.navigation-item.selected {
+  color: #ffff;
+  border-bottom: 2px solid #ffff;
 }
 
 .aboutme {
@@ -22,8 +28,9 @@
   position: sticky;
   padding: 8px;
   top: 0;
-  z-index: 1;
+  z-index: 11;
   background-color: $footer-background;
+  font-family: 'Open Sans', sans-serif;
 
   h2 {
     margin-top: 0.25em;

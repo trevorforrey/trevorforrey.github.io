@@ -1,15 +1,17 @@
-<div class="project-header">
-  <div class="project-banner-wrapper">
-    <div class="project-banner" style="background-image: linear-gradient(90deg, rgba(28,28,40,0) 0%, rgba(28,28,40,0.8) 90%, rgba(28,28,40,1) 100%), url('{{ include.background-img-src }}');"></div>
-    <div class="project-banner project-banner-overlay" style="background: linear-gradient(90deg, rgba({{ include.accent-color }},0.98) 0%, rgba({{ include.accent-color }},0.4) 40%, rgba(0,0,0,0) 50%);">
-      <div class="project-header-description">
-        <div class="project-header-title">
-          <div class="project-actual-title">{{ include.project-title }}</div>
-          {% if include.git-url %}
-            <a href="https://github.com/trevorforrey/{{ include.git-url }}"><div class="icon icon--github">{% include icon-github.svg %}</div></a>
-          {% endif %}
+<div class="project-header-wrapper">
+  <div class="project-header">
+    <div class="project-banner-wrapper">
+      <div class="project-banner" style="background-image: linear-gradient(90deg, rgba(28,28,40,0) 0%, rgba(28,28,40,0.8) 90%, rgba(28,28,40,1) 100%), url('{{ include.background-img-src }}');"></div>
+      <div class="project-banner project-banner-overlay" style="background: linear-gradient(90deg, rgba({{ include.accent-color }},0.98) 0%, rgba({{ include.accent-color }},0.4) 40%, rgba(0,0,0,0) 50%);">
+        <div class="project-header-description">
+          <div class="project-header-title">
+            <div class="project-actual-title">{{ include.project-title }}</div>
+            {% if include.git-url %}
+              <a href="https://github.com/trevorforrey/{{ include.git-url }}"><div class="icon icon--github">{% include icon-github.svg %}</div></a>
+            {% endif %}
+          </div>
+          <div>{{ include.project-description }}</div>
         </div>
-        <div>{{ include.project-description }}</div>
       </div>
     </div>
   </div>
