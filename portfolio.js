@@ -112,6 +112,9 @@ function loadProjectData(projectData) {
     })
     .then(function(projectHTML) {
       document.querySelector('.project-load').innerHTML = projectHTML;
+    })
+    .then(function() {
+      onWorkDetailScroll();
     });
     window.scrollTo(0,0);
 }

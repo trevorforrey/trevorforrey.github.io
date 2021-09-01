@@ -78,8 +78,26 @@
   width: 100%;
   z-index: 12;
 
-  .sticky-project-header-name {
+  .sticky-project-header-gradient-wrapper {
     display: flex;
+    align-items: center;
+
+    .sticky-project-header-name {
+      display: flex;
+      margin-left: 1em;
+    }
+
+    .sticky-project-header-arrow {
+      display: flex;
+      margin-right: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      margin-left: 8px;
+      opacity: 0.5;
+      height: 32px;
+      width: 32px;
+      cursor: pointer;
+    }
   }
 }
 
