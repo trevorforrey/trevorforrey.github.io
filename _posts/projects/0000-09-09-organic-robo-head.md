@@ -16,6 +16,11 @@ github-url: organic_robo_head
   git-url='organic_robo_head'
 %}
 
+{% include project-sticky-header.html
+  project-title='Organic Robo Head'
+  accent-color='152,173,94'
+%}
+
 This project was for an Embedded C Programming class I took in college.
 
 My goals for this project were:

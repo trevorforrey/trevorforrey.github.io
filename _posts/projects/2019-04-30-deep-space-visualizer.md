@@ -14,6 +14,11 @@ content-src: project/2019/04/30/deep-space-visualizer.html
   accent-color='51,51,51'
 %}
 
+{% include project-sticky-header.html
+  project-title='Deep Space Visualizer'
+  accent-color='51,51,51'
+%}
+
 {:.image}
 ![Alt text](assets/img/deepSpaceVisualizer/PathView.png "My Title")
 

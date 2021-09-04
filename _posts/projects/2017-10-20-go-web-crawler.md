@@ -16,6 +16,11 @@ github-url: web_crawler
 	git-url='web_crawler'
 %}
 
+{% include project-sticky-header.html
+  project-title='Go Web Crawler'
+  accent-color='152,217,237'
+%}
+
 After reading the book, _The Go Programming Language_, I had a strong itch to make something using Go.
 I ended up deciding on creating a web crawler, with the attempt to build something
 that fully took advantage of Golang's concurrency primitives. This project is loosely

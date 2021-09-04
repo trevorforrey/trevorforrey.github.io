@@ -18,6 +18,11 @@ content-src: project/2018/04/03/subway-shibori.html
   git-url='web_ble_jacket'
 %}
 
+{% include project-sticky-header.html
+  project-title='Subway Shibori'
+  accent-color='243,156,107'
+%}
+
 {:.image}
 ![Alt text](assets/img/subwayShibori/gallery_shot.JPG "My Title")
 
