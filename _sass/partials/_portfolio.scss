@@ -35,6 +35,14 @@
   }
 }
 
+.subway-shibori {
+  .stylish-scroll {
+    ::-webkit-scrollbar-thumb {
+      background: #fde10d;
+    }
+  }
+}
+
 .width-50 {
   width: 50%;
 }
