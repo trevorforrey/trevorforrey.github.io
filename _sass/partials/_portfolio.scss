@@ -38,10 +38,19 @@
 .subway-shibori {
   .stylish-scroll {
     ::-webkit-scrollbar-thumb {
-      background: #fde10d;
+      background: #cab302;
     }
   }
 }
+
+.deepspace-visualizer {
+  .stylish-scroll {
+    ::-webkit-scrollbar-thumb {
+      background: #333333;
+    }
+  }
+}
+
 
 .width-50 {
   width: 50%;

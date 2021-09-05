@@ -6,7 +6,7 @@ meta: Fashion + Tech Garment
 category: project
 img-src: assets/img/subwayShibori/gallery_shot.JPG
 background-img-src: assets/img/subwayShibori/gallery_shot.JPG
-accent-color: 253,225,13
+accent-color: 202,179,2
 content-src: project/2018/04/03/subway-shibori.html
 ---
 
@@ -14,13 +14,13 @@ content-src: project/2018/04/03/subway-shibori.html
   background-img-src='assets/img/subwayShibori/gallery_shot.JPG'
   project-title='Subway Shibori'
   project-description='An embedded tech jacket inspired by the subways in Tokyo.'
-  accent-color='253,225,13'
+  accent-color='202,179,2'
   git-url='web_ble_jacket'
 %}
 
 {% include project-sticky-header.html
   project-title='Subway Shibori'
-  accent-color='253,225,13'
+  accent-color='202,179,2'
 %}
 
 <div class='subway-shibori'>
