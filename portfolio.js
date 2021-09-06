@@ -87,6 +87,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadProjectData(projectURL);
     projectLoadAnimation();
+    document.querySelector('.portfolio').classList.remove('overflow-x-hidden');
   }
 
   // Add event listeners to project thumbnails
@@ -142,6 +143,7 @@ function onProjectReturn() {
     const projectBelt = document.querySelector('.project-belt');
     projectReturnAnimation();
     document.querySelector('.project-return').style.display = 'none';
+    document.querySelector('.portfolio').classList.add('overflow-x-hidden');
   }
 }
 
