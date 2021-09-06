@@ -9,7 +9,7 @@ github-url: organic_robo_head
 ---
 
 {% include project-header.html
-  background-img-src='assets/img/robohead-background.png'
+  background-img-src='assets/img/organic-robo-head/robohead-background.png'
   project-title='Organic Robo Head'
   project-description='Interactive art piece.'
   accent-color='152,173,94'

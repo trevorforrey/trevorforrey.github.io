@@ -3,7 +3,7 @@ layout: project
 title: Learning Go Article
 meta: Programming Language
 category: project
-img-src: assets/img/goherIllustration.png
+img-src: assets/img/learning-go-through-illustrations/goherIllustration.png
 content-src: project/2018/05/16/learning-go.html
 ---
 
