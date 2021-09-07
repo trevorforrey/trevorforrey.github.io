@@ -63,12 +63,14 @@
 }
 
 .project-header-description {
+  font-family: 'Open Sans', sans-serif;
   padding-left: 2em;
   display: block;
   color: #ffff;
 }
 
 .sticky-project-header {
+  font-family: 'Open Sans', sans-serif;
   display: flex;
   align-items: center;
   position: sticky;
@@ -86,19 +88,6 @@
       display: flex;
       margin-left: 1em;
       color: white;
-    }
-
-    .sticky-project-header-arrow {
-      display: none;
-      // display: flex;
-      margin-right: 0;
-      margin-top: 0;
-      margin-bottom: 0;
-      margin-left: 8px;
-      opacity: 0.5;
-      height: 32px;
-      width: 32px;
-      cursor: pointer;
     }
   }
 }

@@ -56,7 +56,6 @@ img {
 .name-and-face {
   display: flex;
   align-items: center;
-  margin-right: 8em;
 }
 
 .name {
@@ -65,6 +64,10 @@ img {
   margin-left: 0.5em;
   color: #ffff;
   cursor: pointer;
+
+  &:hover {
+    color: #fffe;
+  }
 }
 
 .occupation {
