@@ -1,11 +1,12 @@
 ---
 layout: project
 title: Go Web Crawler
-meta: Web Crawler that takes advantage of concurrent programming
+meta: Web Crawler that collects images while crawling and takes advantage of go's concurrent programming primitives.
 category: project
 img-src: assets/img/web-crawler/HolmesGopher.svg
 content-src: project/2017/10/20/go-web-crawler.html
 github-url: web_crawler
+accent-color: '152,217,237'
 ---
 
 {% include project-header.html

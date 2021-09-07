@@ -1,10 +1,11 @@
 ---
 layout: project
-title: Deep Space Visualizer
-meta: Space Visualizer for the Web
+title: Satellite Visualizer
+meta: 3D simulation where users can explore the location and path of an ASU satelitte launch.
 category: project
 img-src: assets/img/deepSpaceVisualizer/EarthView.png
 content-src: project/2019/04/30/deep-space-visualizer.html
+accent-color: '51,51,51'
 ---
 
 {% include project-header.html

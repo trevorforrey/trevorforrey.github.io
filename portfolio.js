@@ -73,10 +73,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // On project thumbnail click
-  const onProjectClick = function(event) {
-    const project = event.target;
-    const projectURL = project.dataset.content;
+  const onProjectClick = function(projectURL) {
     const projectName = getProjectNameFromUrl(projectURL);
+    console.log('projectName :', JSON.stringify(projectName, null, 2));
 
     // Update router state
     pushWindowState(projectName);
@@ -92,7 +91,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Add event listeners to project thumbnails
   for (let container of projectContainers) {
-    container.addEventListener('click', onProjectClick);
+    const objectifiedDataset = { ...container.dataset };
+    container.addEventListener('click', () => onProjectClick(objectifiedDataset.content));
   }
 
   // If reloading or searching on a frontend route
@@ -100,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectName = window.location.hash.slice(1,window.location.hash.length);
     loadProjectData(projectMap[projectName]);
 
+    document.querySelector('.portfolio').classList.remove('overflow-x-hidden');
     const projectBelt = document.querySelector('.project-belt');
     projectBelt.style.left = '-100%';
   }

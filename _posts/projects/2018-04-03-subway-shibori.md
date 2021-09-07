@@ -2,11 +2,11 @@
 layout: project
 title: Subway Shibori
 description: An embedded tech jacket inspired by the subways in Tokyo.
-meta: Fashion + Tech Garment
+meta: Embedded tech jacket inspired by the subways in Tokyo.
 category: project
 img-src: assets/img/subwayShibori/gallery_shot.JPG
 background-img-src: assets/img/subwayShibori/gallery_shot.JPG
-accent-color: 202,179,2
+accent-color: '202,179,2'
 content-src: project/2018/04/03/subway-shibori.html
 ---
 

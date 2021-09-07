@@ -1,10 +1,11 @@
 ---
 layout: project
 title: Learning Go Article
-meta: Programming Language
+meta: Article that teaches go's concurrency primitives with an emphasis on illustrations.
 category: project
 img-src: assets/img/learning-go-through-illustrations/goherIllustration.png
 content-src: project/2018/05/16/learning-go.html
+accent-color: '152,217,237'
 ---
 
 {% include project-header.html

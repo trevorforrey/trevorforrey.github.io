@@ -1,11 +1,12 @@
 ---
 layout: project
 title: Organic Robo Head
-meta: Embedded Project where a robotic head reacts to touch
+meta: Interactive art piece with a motorized head and field of LEDs that react to user touch.
 category: project
 img-src: assets/img/organic-robo-head/robohead.jpg
 content-src: project/0000/09/09/organic-robo-head.html
 github-url: organic_robo_head
+accent-color: '152,173,94'
 ---
 
 {% include project-header.html
