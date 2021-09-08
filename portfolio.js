@@ -1,5 +1,11 @@
 const deployed = false;
 
+const Pages = {
+  personal: 'personal-projects',
+  professional: 'professional-projects',
+  photography: 'photography'
+};
+
 function isElementInView(element, fullyInView) {
   var pageTop = window.scrollTop();
   var pageBottom = pageTop + window.height();
@@ -48,7 +54,19 @@ const onTabSelect = function(sectionSelected) {
     }
   });
 
-  onProjectReturn();
+  console.log('window: ', window);
+
+  if (sectionSelected === Pages.personal && window.location.href) {
+    onProjectReturn();
+  }
+
+  if (sectionSelected === Pages.professional) {
+    window.location.pathname = '/professional';
+  }
+
+  if (sectionSelected === Pages.personal && window.location.pathname !== '/') {
+    window.location.pathname = '/';
+  }
 }
 
 document.addEventListener('scroll', function() { onWorkDetailScroll() });

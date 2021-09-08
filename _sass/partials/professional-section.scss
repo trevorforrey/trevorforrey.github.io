@@ -1,0 +1,95 @@
+.professional-page {
+  padding-bottom: 6em;
+}
+
+.professional-project-description {
+  margin-left: 1em;
+}
+
+.company-section {
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  padding-top: 4em;
+
+  h1, h2, h3, h4 {
+    color: #ffff;
+    margin-block-start: 0;
+  }
+
+  margin-bottom: 2em;
+}
+
+.position-and-time {
+  font-family: 'Open Sans';
+  color: #ffff;
+  opacity: 50%;
+}
+
+
+.project-name-and-logo {
+  display: flex;
+  align-items: center;
+  margin-top: 3em;
+  margin-left: 1em;
+  margin-bottom: 1em;
+
+  .project-start-avatar {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 3em;
+    height: 3em;
+  }
+
+  .project-name {
+    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    margin-left: 0.5em;
+    color: #ffff;
+    cursor: pointer;
+
+    &:hover {
+      color: #fffe;
+    }
+  }
+
+  .project-date-range {
+    margin-left: 1em;
+    font-family: 'Open Sans';
+    color: #ffff;
+    opacity: 50%;
+  }
+}
+
+.professional-project-avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 8em;
+  height: 8em;
+  margin-bottom: 0.5em;
+}
+
+.professional-scroll {
+  width: 100%;
+
+  img {
+    max-height: 22em;
+    margin: auto;
+  }
+
+  /* width */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: $footer-background;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #51235d;
+  }
+}

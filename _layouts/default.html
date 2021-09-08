@@ -1,5 +1,10 @@
 {% include head.html %}
 <body>
-  {{content}}
+  <div class='app'>
+    {% include navigation_bar.html %}
+    <div class="main-area">
+      {{content}}
+    </div>
+  </div>
   {% include footer.html %}
 </body>
