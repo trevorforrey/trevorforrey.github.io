@@ -3,7 +3,20 @@
 }
 
 .professional-project-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
   margin-left: 1em;
+  margin-bottom: 1.5em;
+  max-width: 650px;
+}
+
+.professional-list {
+  margin-bottom: 1em;
+}
+
+.list-result {
+  color: #ffff;
+  opacity: 80%;
 }
 
 .company-section {
@@ -76,6 +89,7 @@
   img {
     max-height: 22em;
     margin: auto;
+    margin-right: 1em;
   }
 
   /* width */
@@ -91,5 +105,29 @@
   /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #51235d;
+  }
+}
+
+.gk-scroll {
+  img {
+    border: 1px solid #1d958a;
+    border-bottom: none;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #1d958a;
+  }
+}
+
+.boards-scroll {
+  img {
+    border: 1px solid #ff881d;
+    border-bottom: none;
+  }
+
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ff881d;
   }
 }
