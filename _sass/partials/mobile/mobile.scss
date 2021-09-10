@@ -66,4 +66,20 @@
     width: 32px;
     cursor: pointer;
   }
+
+  .occupation {
+    display: none;
+  }
+
+  .name-and-face {
+    margin-right: 4em;
+
+    .avatar {
+      display: none;
+    }
+  }
+
+  .project-thumb-container .project-description {
+    visibility: visible;
+  }
 }

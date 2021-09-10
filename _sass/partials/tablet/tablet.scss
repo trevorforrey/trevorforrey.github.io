@@ -66,4 +66,12 @@
     width: 32px;
     cursor: pointer;
   }
+
+  .occupation {
+    display: none;
+  }
+
+  .project-thumb-container .project-description {
+    visibility: visible;
+  }
 }
