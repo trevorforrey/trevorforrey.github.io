@@ -3,7 +3,7 @@ const deployed = false;
 const Pages = {
   personal: 'personal-projects',
   professional: 'professional-projects',
-  photography: 'photography'
+  photography: 'photography-projects'
 };
 
 function isElementInView(element, fullyInView) {

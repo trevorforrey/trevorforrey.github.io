@@ -146,7 +146,7 @@
     // color: #444;
   }
 
-  img {
+  img:not(.sticky-project-header-arrow) {
     max-width: 100%;
     margin-bottom: 1.2em;
     display: block;

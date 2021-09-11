@@ -15,6 +15,10 @@
   margin-bottom: 1em;
 }
 
+.list-title {
+  color: #ffff;
+}
+
 .list-result {
   color: #ffff;
   opacity: 80%;
@@ -131,4 +135,9 @@
   ::-webkit-scrollbar-thumb {
     background: #ff881d;
   }
+}
+
+.professional-timeline {
+  margin-top: 3em;
+  height: 35em;
 }
