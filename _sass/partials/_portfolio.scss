@@ -87,13 +87,13 @@
 }
 
 .project-list-padding-wrap {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 2.5em;
   padding: 2em;
 }
 
 .project-thumb-container {
-  margin-right: 2.5em;
-  margin-bottom: 2.5em;
-  float: left;
   background-color: #212130;
   cursor: pointer;
   transition: 0.25s;
@@ -129,7 +129,7 @@
   font-family: 'Open Sans', sans-serif;
   color: #ffff;
   padding-top: 1em;
-  width: 13em;
+  width: 100%;
 }
 
 .project-tag-color {
@@ -206,4 +206,9 @@
     margin-bottom: 1rem;
     display: block;
   }
+}
+
+.inner-project-thumb-container {
+  justify-content: space-between;
+  width: 100%;
 }

@@ -55,6 +55,10 @@
     display: none !important;
   }
 
+  .sticky-project-header {
+    top: 48;
+  }
+
   .sticky-project-header-arrow {
     display: flex;
     margin-right: 0;
@@ -69,6 +73,10 @@
 
   .occupation {
     display: none;
+  }
+
+  .navigation {
+    padding-right: 0px;
   }
 
   .name-and-face {
