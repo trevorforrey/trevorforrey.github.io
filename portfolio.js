@@ -191,12 +191,11 @@ function onProjectReturn() {
 }
 
 function pushWindowState(projectName) {
-  const gitHubFix = deployed ? '/portfolio' : ''
   const endURL = projectName ? '/#' + projectName : '';
   window.history.pushState(
     {},
     projectName,
-    window.location.origin + gitHubFix + endURL
+    window.location.origin + endURL
   );
 }
 
