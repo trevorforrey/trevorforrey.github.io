@@ -28,14 +28,12 @@ function onWorkDetailScroll() {
     const projectHeight = projectHeader.clientHeight;
     // Header is hidden - show the sticky header
     if (windowScroll > projectHeight) {
-      console.log('hidden');
       const stickyProjectHeaderNode = document.querySelector('.sticky-project-header');
       if (stickyProjectHeaderNode.className.includes('hidden')) {
         stickyProjectHeaderNode.classList.remove('hidden');
       }
     // Header is showing - hide the sticky header
     } else {
-      console.log('showing!');
       const stickyProjectHeaderNode = document.querySelector('.sticky-project-header');
       if (!stickyProjectHeaderNode.className.includes('hidden')) {
         stickyProjectHeaderNode.classList.add('hidden');
