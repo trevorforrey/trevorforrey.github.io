@@ -1,4 +1,4 @@
-const deployed = false;
+const deployed = true;
 
 const Pages = {
   personal: 'personal-projects',
