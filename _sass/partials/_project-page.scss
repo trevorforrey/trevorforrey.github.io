@@ -14,5 +14,88 @@
 
 .highlighter-rouge {
   font-family: monospace;
-  background-color: #F0F0F0;
+  background-color: $background-secondary-color;
+}
+
+.project-load {
+  display: flex;
+  justify-content: center;
+}
+
+.project-banner-wrapper {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.project-header {
+  background-size: cover;
+  background-position: center;
+  height: 12em;
+  align-items: center;
+}
+
+.project-banner {
+  background-size: cover;
+  background-position: center;
+  height: 12em;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.project-banner-overlay {
+  display: flex;
+  z-index: 10;
+}
+
+.project-header-title {
+  display: flex;
+  align-items: center;
+
+  .project-actual-title {
+    display: flex;
+    font-size: 50;
+    margin-right: 12px;
+  }
+}
+
+.project-header-description {
+  font-family: 'Open Sans', sans-serif;
+  padding-left: 2em;
+  display: block;
+  color: #ffff;
+}
+
+.sticky-project-header-arrow {
+  display: none;
+}
+
+.sticky-project-header {
+  font-family: 'Open Sans', sans-serif;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  top: 64;
+  align-self: flex-start;
+  height: 3em;
+  width: 100%;
+  z-index: 12;
+
+  .sticky-project-header-gradient-wrapper {
+    display: flex;
+    align-items: center;
+
+    .sticky-project-header-name {
+      display: flex;
+      margin-left: 1em;
+      color: white;
+    }
+  }
+}
+
+.hidden {
+  visibility: hidden;
 }

@@ -1,0 +1,36 @@
+.photography-gallery {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: 0;
+}
+
+.photo-container {
+  overflow: hidden !important;
+  padding: 0 !important;
+  max-height: 25em;
+
+  .photography-img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.gc1 {
+  grid-column: span 1;
+}
+.gc2 {
+  grid-column: span 2;
+}
+.gc3 {
+  grid-column: span 3;
+}
+
+.gr1 {
+  grid-row: span 1;
+}
+.gr2 {
+  grid-row: span 2;
+}
+.gr3 {
+  grid-row: span 3;
+}

@@ -1,9 +1,21 @@
 .navigation-item {
+  @include primary-text;
   display: inline-block;
   padding-top: 0.25em;
   padding-bottom: 0.25em;
-  background-color: white;
+  margin-right: 1em;
+  background-color: $footer-background;
   cursor: pointer;
+  border-bottom: 2px solid rgba(170, 50, 220, 0);
+
+  &:hover {
+    @include secondary-text;
+    border-bottom: 2px solid #ffff;
+  }
+}
+.navigation-item.selected {
+  color: #ffff;
+  border-bottom: 2px solid #ffff;
 }
 
 .aboutme {
@@ -11,13 +23,57 @@
 }
 
 .navigation {
+  display: flex;
+  align-items: center;
   position: sticky;
+  padding: 8px;
   top: 0;
-  z-index: 1;
-  background-color: white;
+  z-index: 11;
+  background-color: $footer-background;
+  font-family: 'Open Sans', sans-serif;
 
   h2 {
     margin-top: 0.25em;
     margin-bottom: 0.25em;
   }
+}
+
+.avatar {
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 2em;
+  height: 2em;
+  margin: 8px;
+}
+
+img {
+  display: inline;
+  height: 100%;
+  width: auto;
+}
+
+.name-and-face {
+  display: flex;
+  align-items: center;
+  margin-right: 5em;
+}
+
+.name {
+  display: flex;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  margin-left: 0.5em;
+  color: #ffff;
+  cursor: pointer;
+
+  &:hover {
+    color: #fffe;
+  }
+}
+
+.occupation {
+  margin-left: 1em;
+  color: #ffff;
+  opacity: 50%;
 }

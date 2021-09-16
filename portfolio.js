@@ -1,5 +1,88 @@
 const deployed = true;
 
+const Pages = {
+  personal: 'personal-projects',
+  professional: 'professional-projects',
+  photography: 'photography-projects'
+};
+
+function isElementInView(element, fullyInView) {
+  var pageTop = window.scrollTop();
+  var pageBottom = pageTop + window.height();
+  const elementNode = document.querySelector(element);
+  var elementTop = elementNode.offset().top;
+  var elementBottom = elementTop + elementNode.height();
+
+  if (fullyInView === true) {
+      return ((pageTop < elementTop) && (pageBottom > elementBottom));
+  } else {
+      return ((elementTop <= pageBottom) && (elementBottom >= pageTop));
+  }
+}
+
+function onWorkDetailScroll() {
+  // If you're viewing a project check to see if banner is hidden
+  if (window.location.href.includes('#')) {
+    const windowScroll = window.scrollY;
+    const projectHeader = document.querySelector('.project-header');
+    const projectHeight = projectHeader.clientHeight;
+    // Header is hidden - show the sticky header
+    if (windowScroll > projectHeight) {
+      console.log('hidden');
+      const stickyProjectHeaderNode = document.querySelector('.sticky-project-header');
+      if (stickyProjectHeaderNode.className.includes('hidden')) {
+        stickyProjectHeaderNode.classList.remove('hidden');
+      }
+    // Header is showing - hide the sticky header
+    } else {
+      console.log('showing!');
+      const stickyProjectHeaderNode = document.querySelector('.sticky-project-header');
+      if (!stickyProjectHeaderNode.className.includes('hidden')) {
+        stickyProjectHeaderNode.classList.add('hidden');
+      }
+    }
+  }
+}
+
+const selectTab = function(sectionSelected) {
+  console.log('sectionSelected in selectTab :', JSON.stringify(sectionSelected, null, 2));
+  const allNavigationItems = document.querySelectorAll('.navigation-item');
+  allNavigationItems.forEach((navigationItem) => {
+    if (!navigationItem.className.includes(sectionSelected)) {
+      navigationItem.classList.remove('selected');
+    } else {
+      navigationItem.classList.add('selected');
+    }
+  });
+}
+
+const onTabSelect = function(sectionSelected) {
+  selectTab(sectionSelected);
+
+  console.log('window: ', window);
+
+  if (sectionSelected === Pages.personal && window.location.href.includes('#')) {
+    onProjectReturn();
+  }
+
+  if (sectionSelected === Pages.professional) {
+    window.location.pathname = '/professional';
+    return;
+  }
+
+  if (sectionSelected === Pages.photography) {
+    window.location.pathname = '/photography';
+    return;
+  }
+
+  if (sectionSelected === Pages.personal && window.location.pathname !== '/') {
+    window.location.pathname = '/';
+    return;
+  }
+}
+
+document.addEventListener('scroll', function() { onWorkDetailScroll() });
+
 document.addEventListener('DOMContentLoaded', function() {
   const projectContainers = document.querySelectorAll('.project-thumb-container');
 
@@ -20,10 +103,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // On project thumbnail click
-  const onProjectClick = function(event) {
-    const project = event.target;
-    const projectURL = project.dataset.content;
+  const onProjectClick = function(projectURL) {
     const projectName = getProjectNameFromUrl(projectURL);
+    console.log('projectName :', JSON.stringify(projectName, null, 2));
 
     // Update router state
     pushWindowState(projectName);
@@ -34,11 +116,25 @@ document.addEventListener('DOMContentLoaded', function() {
 
     loadProjectData(projectURL);
     projectLoadAnimation();
+    document.querySelector('.portfolio').classList.remove('overflow-x-hidden');
   }
 
   // Add event listeners to project thumbnails
   for (let container of projectContainers) {
-    container.addEventListener('click', onProjectClick);
+    const objectifiedDataset = { ...container.dataset };
+    container.addEventListener('click', () => onProjectClick(objectifiedDataset.content));
+  }
+
+  // Select the correct tab based on our current route
+  console.log('window.location.pathname :', JSON.stringify(window.location.pathname, null, 2));
+  console.log('window.location.href :', JSON.stringify(window.location.href, null, 2));
+  if (window.location.href.includes('#') || window.location.pathname === '/') {
+    selectTab(Pages.personal);
+  } else if (window.location.pathname === '/professional') {
+    selectTab(Pages.professional);
+    console.log('Passing in to selectTab :', JSON.stringify(Pages.professional, null, 2));
+  } else if (window.location.pathname === '/photography') {
+    selectTab(Pages.photography);
   }
 
   // If reloading or searching on a frontend route
@@ -46,14 +142,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const projectName = window.location.hash.slice(1,window.location.hash.length);
     loadProjectData(projectMap[projectName]);
 
+    document.querySelector('.portfolio').classList.remove('overflow-x-hidden');
     const projectBelt = document.querySelector('.project-belt');
     projectBelt.style.left = '-100%';
-  }
-
-  // Add navigation events
-  const navItems = document.querySelectorAll('.navigation-item');
-  for (let navItem of navItems) {
-    navItem.addEventListener('click', onNavClick);
   }
 });
 
@@ -65,6 +156,9 @@ function loadProjectData(projectData) {
     })
     .then(function(projectHTML) {
       document.querySelector('.project-load').innerHTML = projectHTML;
+    })
+    .then(function() {
+      onWorkDetailScroll();
     });
     window.scrollTo(0,0);
 }
@@ -85,12 +179,15 @@ function projectReturnAnimation() {
 }
 
 function onProjectReturn() {
-  pushWindowState('');
-  // Toggle project data visibility
-  document.querySelector('.project-container').style.display = 'none';
-  const projectBelt = document.querySelector('.project-belt');
-  projectReturnAnimation();
-  document.querySelector('.project-return').style.display = 'none';
+  if (window.location.hash) {
+    pushWindowState('');
+    // Toggle project data visibility
+    document.querySelector('.project-container').style.display = 'none';
+    const projectBelt = document.querySelector('.project-belt');
+    projectReturnAnimation();
+    document.querySelector('.project-return').style.display = 'none';
+    document.querySelector('.portfolio').classList.add('overflow-x-hidden');
+  }
 }
 
 function pushWindowState(projectName) {
@@ -110,55 +207,14 @@ function getProjectNameFromUrl(projectURL) {
   return projectName;
 }
 
-// On navigation item click
-function onNavClick(event) {
-  // set all colors back to default
-  const allNavItems = document.querySelectorAll('.navigation-item');
-  for (let navItem of allNavItems) {
-    navItem.style.color = '#c2c2c2'; // was 8c8c8c
-  }
-
-  // set src element color
-  event.srcElement.style.color = '#8c8c8c';
-
-  // update current content on screen
-  switch (event.srcElement.innerText) {
-    case 'Projects': {
-      if (window.location.hash) {
-        onProjectReturn();
-      }
-      // If on mobile or tablet site, rearrange the dom
-      const portfolio = document.querySelector('.portfolio');
-      if (portfolio.style.display === 'none') {
-        const app = document.querySelector('.app');
-        const sidePanelContent = document.querySelector('.side-panel');
-        app.prepend(sidePanelContent);
-        sidePanelContent.style.display = 'none';
-        portfolio.style.display = 'block';
-      }
-      break;
-    }
-    case 'About Me': {
-      document.querySelector('.portfolio').style.display = 'none';
-      const mainArea = document.querySelector('.main-area');
-      const sidePanelContent = document.querySelector('.side-panel');
-      mainArea.appendChild(sidePanelContent);
-      sidePanelContent.style.display = 'block';
-      break;
-    }
-  }
-}
-
 // Project Map (Allows for frontend routing reload)
 const projectMap = {
-  'fightstick': 'project/0000/07/07/fightstick.html',
-  'python-markov-chain': 'project/0000/08/08/python-markov-chain.html',
   'organic-robo-head': 'project/0000/09/09/organic-robo-head.html',
   'go-web-crawler': 'project/2017/10/20/go-web-crawler.html',
   'subway-shibori': 'project/2018/04/03/subway-shibori.html',
   'ocelot': 'project/2018/04/28/ocelot.html',
   'dash-borg': 'project/2018/04/30/dash-borg.html',
   'learning-go': 'project/2018/05/16/learning-go.html',
-  'morrigan-fightstick': 'project/2018/12/25/morrigan-fightstick.html',
+  'fightsticks': 'project/2018/12/25/fightsticks.html',
   'deep-space-visualizer': 'project/2019/04/30/deep-space-visualizer.html'
 }

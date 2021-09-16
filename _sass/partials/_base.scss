@@ -1,26 +1,32 @@
 .app {
+  background-image: url('img/forbabytrevor.png');
   display: flex;
+  flex: 1;
+  flex-direction: column;
   justify-content: flex-start;
 }
 
 .project {
   justify-content: start;
   display: flex;
-  max-width: 700px;
+  max-width: 1200px;
 }
 
 .project-return {
   position: sticky;
-  padding-top: 1em;
   padding-right: 1em;
-  top: 0;
-  height: 2em;
+  top: 64;
+  height: 3em;
   width: 2em;
   margin: 0 !important;
   opacity: 0.5;
+  cursor: pointer;
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
   margin: auto;
   padding: auto;
 
@@ -31,6 +37,7 @@ body {
   }
 
   p, li {
+    @include primary-text;
     font-family: 'Open Sans', sans-serif;
     line-height: 1.5em;
     letter-spacing: -.0125em;
@@ -43,7 +50,7 @@ body {
 }
 
 a {
-    color: #0060B6;
+    color: #60b4ff;
     text-decoration: none;
 }
 
