@@ -43,7 +43,6 @@ function onWorkDetailScroll() {
 }
 
 const selectTab = function(sectionSelected) {
-  console.log('sectionSelected in selectTab :', JSON.stringify(sectionSelected, null, 2));
   const allNavigationItems = document.querySelectorAll('.navigation-item');
   allNavigationItems.forEach((navigationItem) => {
     if (!navigationItem.className.includes(sectionSelected)) {
@@ -57,23 +56,24 @@ const selectTab = function(sectionSelected) {
 const onTabSelect = function(sectionSelected) {
   selectTab(sectionSelected);
 
-  console.log('window: ', window);
-
   if (sectionSelected === Pages.personal && window.location.href.includes('#')) {
     onProjectReturn();
   }
 
   if (sectionSelected === Pages.professional) {
+    window.location.hash = '';
     window.location.pathname = '/professional';
     return;
   }
 
   if (sectionSelected === Pages.photography) {
+    window.location.hash = '';
     window.location.pathname = '/photography';
     return;
   }
 
   if (sectionSelected === Pages.personal && window.location.pathname !== '/') {
+    window.location.hash = '';
     window.location.pathname = '/';
     return;
   }
@@ -103,7 +103,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // On project thumbnail click
   const onProjectClick = function(projectURL) {
     const projectName = getProjectNameFromUrl(projectURL);
-    console.log('projectName :', JSON.stringify(projectName, null, 2));
 
     // Update router state
     pushWindowState(projectName);
@@ -124,15 +123,12 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Select the correct tab based on our current route
-  console.log('window.location.pathname :', JSON.stringify(window.location.pathname, null, 2));
-  console.log('window.location.href :', JSON.stringify(window.location.href, null, 2));
-  if (window.location.href.includes('#') || window.location.pathname === '/') {
-    selectTab(Pages.personal);
-  } else if (window.location.pathname === '/professional') {
+  if (window.location.pathname === '/professional') {
     selectTab(Pages.professional);
-    console.log('Passing in to selectTab :', JSON.stringify(Pages.professional, null, 2));
   } else if (window.location.pathname === '/photography') {
     selectTab(Pages.photography);
+  } else if (window.location.href.includes('#') || window.location.pathname === '/') {
+    selectTab(Pages.personal);
   }
 
   // If reloading or searching on a frontend route

@@ -56,7 +56,7 @@
   }
 
   .sticky-project-header {
-    top: 48;
+    top: 70;
   }
 
   .sticky-project-header-arrow {
@@ -71,23 +71,91 @@
     cursor: pointer;
   }
 
+  .project-container img:not(.sticky-project-header-arrow) {
+    height: auto;
+  }
+
+  .project-header-title .project-actual-title {
+    font-size: 30;
+  }
+
   .occupation {
     display: none;
   }
 
   .navigation {
+    display: flex;
+    flex-direction: column;
     padding-right: 0px;
   }
 
+  .navigation-item {
+    font-weight: 100;
+  }
+
   .name-and-face {
-    margin-right: 4em;
+    margin-right: 0;
 
     .avatar {
       display: none;
     }
+
+    .name {
+      font-weight: 500;
+    };
   }
 
   .project-thumb-container .project-description {
     visibility: visible;
+  }
+
+  .footer {
+    padding-bottom: 1em;
+  }
+
+  // Professional Section
+
+  .position-and-time {
+    strong {
+      font-size: small;
+    }
+  }
+
+  .project-date-range {
+    font-size: small;
+  }
+
+  .project-name-and-logo {
+    .project-start-avatar {
+      width: 2em;
+      height: 2em;
+    }
+  }
+
+  .professional-project-avatar {
+    width: 6em;
+    height: 6em;
+  }
+
+  .company-section {
+    padding-top: 2em;
+  }
+
+  .professional-scroll img {
+    max-height: 18em;
+  }
+
+  // Photography Section
+  .photography-gallery {
+    display: block;
+
+    .photo-container {
+      max-height: 100%;
+    }
+
+    .photography-img {
+      height: auto;
+      width: 100vw;
+    }
   }
 }
